@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AuctionHub.Domain.Entities
+﻿namespace AuctionHub.Domain.Entities
 {
-    internal class Bid
+    public class Bid : BaseEntity
     {
+        public int Amount { get; set; }
+        public DateTime BidTime { get; set; } 
+        public string BiddingRoomId { get; set; }
+        public BiddingRoom BiddingRoom { get; set; }
     }
 }

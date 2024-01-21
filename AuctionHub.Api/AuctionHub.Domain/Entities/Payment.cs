@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AuctionHub.Domain.Enums;
 
 namespace AuctionHub.Domain.Entities
 {
-    internal class Payment
+    public class Payment : BaseEntity
     {
+        public string InvoiceId { get; set; }
+        public Invoice Invoice { get; set; }
+        public int PaymentAmount { get; set; } 
+        public PaymentStatus PaymentStatus { get; set; } 
     }
 }
