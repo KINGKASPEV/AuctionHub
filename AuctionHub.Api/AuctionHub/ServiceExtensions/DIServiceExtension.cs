@@ -1,6 +1,14 @@
-﻿namespace AuctionHub.ServiceExtensions
+﻿using AuctionHub.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+
+namespace AuctionHub.ServiceExtensions
 {
-    public class DIServiceExtension
+    public static class DIServiceExtension
     {
+        public static void AddDependencies(this IServiceCollection services, IConfiguration config)
+        {
+            services.AddDbContext<AuctionHubDbContext>(options =>
+            options.UseSqlite(config.GetConnectionString("DefaultConnection")));
+        }
     }
 }
