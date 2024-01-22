@@ -1,14 +1,17 @@
+using AuctionHub.Configurations;
 using AuctionHub.ServiceExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var config = builder.Configuration;
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDependencies(builder.Configuration);
+builder.Services.AddDependencies(config);
+builder.Services.AddLoggingConfiguration(config);
 
 var app = builder.Build();
 
