@@ -646,6 +646,16 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
+      "AuctionHub.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/AuctionHub.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AuctionHub.Application.dll": {}
+        }
+      },
       "AuctionHub.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1480,6 +1490,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "AuctionHub.Application/1.0.0": {
+      "type": "project",
+      "path": "../AuctionHub.Application/AuctionHub.Application.csproj",
+      "msbuildProject": "../AuctionHub.Application/AuctionHub.Application.csproj"
+    },
     "AuctionHub.Domain/1.0.0": {
       "type": "project",
       "path": "../AuctionHub.Domain/AuctionHub.Domain.csproj",
@@ -1488,6 +1503,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "AuctionHub.Application >= 1.0.0",
       "AuctionHub.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.15",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.15",
@@ -1521,6 +1537,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Users\\user\\Desktop\\My-project\\AuctionHub\\AuctionHub.Api\\AuctionHub.Application\\AuctionHub.Application.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\My-project\\AuctionHub\\AuctionHub.Api\\AuctionHub.Application\\AuctionHub.Application.csproj"
+            },
             "C:\\Users\\user\\Desktop\\My-project\\AuctionHub\\AuctionHub.Api\\AuctionHub.Domain\\AuctionHub.Domain.csproj": {
               "projectPath": "C:\\Users\\user\\Desktop\\My-project\\AuctionHub\\AuctionHub.Api\\AuctionHub.Domain\\AuctionHub.Domain.csproj"
             }
