@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AuctionHub.Domain.Entities;
 
 namespace AuctionHub.Application.Interfaces.Repositories
 {
-    internal interface IInvoiceRepository
+    public interface IInvoiceRepository : IGenericRepository<Invoice>
     {
+        Task<List<Invoice>> GetInvoicesForRoomAsync(string biddingRoomId);
+        Task CreateInvoiceAsync(Invoice invoice);
+        Task UpdateInvoiceAsync(Invoice invoice);
+        Task DeleteInvoiceAsync(string invoiceId);
     }
 }

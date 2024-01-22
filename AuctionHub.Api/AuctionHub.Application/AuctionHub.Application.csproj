@@ -11,4 +11,8 @@
     <Folder Include="ServiceImplementations\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AuctionHub.Domain\AuctionHub.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

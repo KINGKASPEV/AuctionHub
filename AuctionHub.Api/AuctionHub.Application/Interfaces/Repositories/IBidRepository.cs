@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AuctionHub.Domain.Entities;
 
 namespace AuctionHub.Application.Interfaces.Repositories
 {
-    internal interface IBidRepository
+    public interface IBidRepository : IGenericRepository<Bid>
     {
+        Task<List<Bid>> GetBidsForRoomAsync(string biddingRoomId);
+        Task CreateBidAsync(Bid bid);
+        Task UpdateBidAsync(Bid bid);
+        Task DeleteBidAsync(string bidId);
     }
 }

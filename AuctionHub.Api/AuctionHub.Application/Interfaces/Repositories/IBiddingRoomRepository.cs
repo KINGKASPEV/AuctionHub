@@ -2,7 +2,7 @@
 
 namespace AuctionHub.Application.Interfaces.Repositories
 {
-    public interface IBiddingRoomRepository
+    public interface IBiddingRoomRepository : IGenericRepository<BiddingRoom>
     {
         Task CreateBiddingRoomAsync(BiddingRoom biddingRoom);
         Task UpdateBiddingRoomAsync(BiddingRoom biddingRoom);

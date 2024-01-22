@@ -6,7 +6,7 @@ namespace AuctionHub.Infrastructure.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        private readonly AuctionHubDbContext _dbContext;
+        protected readonly AuctionHubDbContext _dbContext;
 
         public GenericRepository(AuctionHubDbContext dbContext) => _dbContext = dbContext;
 

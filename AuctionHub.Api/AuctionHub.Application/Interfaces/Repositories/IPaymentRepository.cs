@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AuctionHub.Domain.Entities;
 
 namespace AuctionHub.Application.Interfaces.Repositories
 {
-    internal interface IPaymentRepository
+    public interface IPaymentRepository : IGenericRepository<Payment>
     {
+        Task<List<Payment>> GetPaymentsForInvoiceAsync(string invoiceId);
+        Task CreatePaymentAsync(Payment payment);
+        Task UpdatePaymentAsync(Payment payment);
+        Task DeletePaymentAsync(string paymentId);
     }
 }
