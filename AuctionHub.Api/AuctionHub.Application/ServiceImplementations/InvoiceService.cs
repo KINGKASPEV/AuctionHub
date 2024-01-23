@@ -39,7 +39,7 @@ namespace AuctionHub.Application.ServiceImplementations
                         InvoiceId = invoice.Id,
                         BiddingRoomId = invoice.BiddingRoomId,
                         WinningBidId = invoice.WinningBidId,
-                        Payments = invoice.Payments,
+                        //Payments = invoice.Payments,
                         CreatedAt = invoice.CreatedAt
                     };
 
