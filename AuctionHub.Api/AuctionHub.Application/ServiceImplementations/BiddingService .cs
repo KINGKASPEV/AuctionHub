@@ -72,7 +72,9 @@ namespace AuctionHub.Application.ServiceImplementations
                         {
                             Amount = winningBid.Amount,
                             BidTime = winningBid.BidTime,
-                            BiddingRoomId = winningBid.BiddingRoomId
+                            BiddingRoomId = winningBid.BiddingRoomId,
+                            CreatedAt = DateTime.UtcNow,
+                            CreatedBy = winningBid.CreatedBy
                         };
 
                         return ApiResponse<BidResponseDto>.Success(bidResponseDto, "Bid submitted successfully.", 200);
