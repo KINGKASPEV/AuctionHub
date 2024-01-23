@@ -1,4 +1,4 @@
-﻿using AuctionHub.Application.DTOs.Bid;
+﻿using AuctionHub.Application.DTOs.Bids;
 using AuctionHub.Application.Interfaces.Repositories;
 using AuctionHub.Application.Interfaces.Services;
 using AuctionHub.Domain;

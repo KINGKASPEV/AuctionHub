@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AuctionHub.Domain.Entities;
+using AuctionHub.Domain;
+using AuctionHub.Application.DTOs.Notifications;
 
 namespace AuctionHub.Application.Interfaces.Services
 {
-    internal interface INotificationService
+    public interface INotificationService
     {
+        Task<ApiResponse<NotificationResponseDto>> NotifyParticipantsAsync(Bid bid);
+        Task<ApiResponse<NotificationResponseDto>> NotifyAuctionConclusionAsync(BiddingRoom biddingRoom);
     }
 }

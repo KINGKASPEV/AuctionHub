@@ -1,4 +1,4 @@
-﻿namespace AuctionHub.Application.DTOs.Bid
+﻿namespace AuctionHub.Application.DTOs.Bids
 {
     public class BidRequestDto
     {

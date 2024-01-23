@@ -19,6 +19,7 @@ namespace AuctionHub.ServiceExtensions
             services.AddScoped<IPaymentRepository, PaymentRepository>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IBiddingService, BiddingService>();
+            services.AddScoped<INotificationService, NotificationService>();
             services.AddDbContext<AuctionHubDbContext>(options =>
             options.UseSqlite(config.GetConnectionString("DefaultConnection")));
         }

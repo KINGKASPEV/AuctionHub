@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AuctionHub.Application.DTOs.Notifications
+﻿namespace AuctionHub.Application.DTOs.Notifications
 {
-    internal class NotificationResponseDto
+    public class NotificationResponseDto
     {
+        public string Message { get; set; }
+        public DateTime NotificationTime { get; set; }
     }
 }

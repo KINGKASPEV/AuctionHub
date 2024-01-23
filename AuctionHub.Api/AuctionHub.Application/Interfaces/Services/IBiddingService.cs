@@ -1,6 +1,6 @@
 ﻿using AuctionHub.Domain.Entities;
 using AuctionHub.Domain;
-using AuctionHub.Application.DTOs.Bid;
+using AuctionHub.Application.DTOs.Bids;
 
 namespace AuctionHub.Application.Interfaces.Services
 {
