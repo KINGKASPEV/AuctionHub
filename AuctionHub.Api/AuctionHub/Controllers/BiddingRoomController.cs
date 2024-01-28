@@ -1,6 +1,5 @@
 ﻿using AuctionHub.Application.DTOs.BiddingRoom;
 using AuctionHub.Application.Interfaces.Services;
-using AuctionHub.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuctionHub.Controllers
