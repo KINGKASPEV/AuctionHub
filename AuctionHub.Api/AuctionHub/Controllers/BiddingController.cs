@@ -15,19 +15,6 @@ namespace AuctionHub.Controllers
             _biddingService = biddingService;
         }
 
-        [HttpPost("start-auction")]
-        public async Task<IActionResult> StartAuctionAsync([FromBody] BiddingRoom biddingRoom)
-        {
-            var response = await _biddingService.StartAuctionAsync(biddingRoom);
-
-            if (response.Succeeded)
-            {
-                return Ok(response);
-            }
-
-            return BadRequest(response);
-        }
-
         [HttpPost("submit-bid")]
         public async Task<IActionResult> SubmitBidAsync([FromBody] Bid bid)
         {

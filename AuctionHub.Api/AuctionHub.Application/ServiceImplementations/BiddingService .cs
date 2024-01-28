@@ -18,33 +18,6 @@ namespace AuctionHub.Application.ServiceImplementations
             _logger = logger;
         }
 
-        public async Task<ApiResponse<string>> StartAuctionAsync(BiddingRoom biddingRoom)
-        {
-            try
-            {
-                // Business logic to start the auction
-                if (!biddingRoom.IsAuctionActive)
-                {
-                    biddingRoom.IsAuctionActive = true;
-                    biddingRoom.EndTime = DateTime.UtcNow.AddHours(1); // Adjust the end time based on your requirements
-
-                    await _unitOfWork.BiddingRooms.UpdateBiddingRoomAsync(biddingRoom);
-                    _unitOfWork.SaveChanges();
-
-                    return ApiResponse<string>.Success("Auction started successfully.", "Auction started", 200);
-                }
-                else
-                {
-                    return ApiResponse<string>.Failed(false, "Auction is already active.", 400, new List<string> { "Auction is already active." });
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error occurred while starting the auction.");
-                return ApiResponse<string>.Failed(false, "Error occurred while starting the auction.", 500, new List<string> { ex.Message });
-            }
-        }
-
         public async Task<ApiResponse<BidResponseDto>> SubmitBidAsync(Bid bid)
         {
             try
