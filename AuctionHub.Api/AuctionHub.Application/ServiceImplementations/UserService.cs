@@ -100,13 +100,22 @@ namespace AuctionHub.Application.ServiceImplementations
         {
             try
             {
+                // Log the userId
+                _logger.LogInformation($"Trying to retrieve user by ID: {userId}");
+
                 // Retrieve the user from the database
                 var existingUser = await _unitOfWork.User.GetUserByIdAsync(userId);
 
                 if (existingUser == null)
                 {
+                    // Log when the user is not found
+                    _logger.LogInformation($"User not found with ID: {userId}");
+
                     return ApiResponse<AppUserResponseDto>.Failed(false, "User not found.", 404, new List<string> { "User not found." });
                 }
+
+                // Log when the user is found
+                _logger.LogInformation($"User found with ID: {userId}");
 
                 // Map the user to the response DTO
                 var responseDto = new AppUserResponseDto
@@ -120,10 +129,12 @@ namespace AuctionHub.Application.ServiceImplementations
             }
             catch (Exception ex)
             {
+                // Log the exception
                 _logger.LogError(ex, "Error occurred while getting a user by ID.");
                 return ApiResponse<AppUserResponseDto>.Failed(false, "Error occurred while getting a user by ID.", 500, new List<string> { ex.Message });
             }
         }
+
 
         public async Task<ApiResponse<bool>> DeleteUserAsync(string userId)
         {
