@@ -1,4 +1,5 @@
-﻿using AuctionHub.Application.Interfaces.Services;
+﻿using AuctionHub.Application.DTOs.Bids;
+using AuctionHub.Application.Interfaces.Services;
 using AuctionHub.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,9 +17,9 @@ namespace AuctionHub.Controllers
         }
 
         [HttpPost("submit-bid")]
-        public async Task<IActionResult> SubmitBidAsync([FromBody] Bid bid)
+        public async Task<IActionResult> SubmitBidAsync([FromBody] BidRequestDto BidRequestDto)
         {
-            var response = await _biddingService.SubmitBidAsync(bid);
+            var response = await _biddingService.SubmitBidAsync(BidRequestDto);
 
             if (response.Succeeded)
             {

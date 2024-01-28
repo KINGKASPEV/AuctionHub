@@ -1,4 +1,5 @@
-﻿using AuctionHub.Application.Interfaces.Services;
+﻿using AuctionHub.Application.DTOs.BiddingRoom;
+using AuctionHub.Application.Interfaces.Services;
 using AuctionHub.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,9 +17,9 @@ namespace AuctionHub.Controllers
         }
 
         [HttpPost("start-auction")]
-        public async Task<IActionResult> StartAuctionAsync([FromBody] BiddingRoom biddingRoom)
+        public async Task<IActionResult> StartAuctionAsync([FromBody] BiddingRoomRequestDto BiddingRoomRequestDto)
         {
-            var response = await _biddingRoomService.StartAuctionAsync(biddingRoom);
+            var response = await _biddingRoomService.StartAuctionAsync(BiddingRoomRequestDto);
 
             if (response.Succeeded)
             {

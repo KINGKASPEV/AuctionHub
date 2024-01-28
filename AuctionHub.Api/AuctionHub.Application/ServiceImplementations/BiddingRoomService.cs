@@ -1,4 +1,5 @@
-﻿using AuctionHub.Application.Interfaces.Repositories;
+﻿using AuctionHub.Application.DTOs.BiddingRoom;
+using AuctionHub.Application.Interfaces.Repositories;
 using AuctionHub.Application.Interfaces.Services;
 using AuctionHub.Domain;
 using AuctionHub.Domain.Entities;
@@ -16,10 +17,19 @@ namespace AuctionHub.Application.ServiceImplementations
             _logger = logger;
         }
 
-        public async Task<ApiResponse<string>> StartAuctionAsync(BiddingRoom biddingRoom)
+        public async Task<ApiResponse<string>> StartAuctionAsync(BiddingRoomRequestDto biddingRoomRequestDto)
         {
             try
             {
+                // Map properties from BiddingRoomRequestDto to BiddingRoom entity
+                var biddingRoom = new BiddingRoom
+                {
+                    RoomName = biddingRoomRequestDto.RoomName,
+                    IsAuctionActive = biddingRoomRequestDto.IsAuctionActive,
+                    EndTime = biddingRoomRequestDto.EndTime,
+                    ItemName = biddingRoomRequestDto.ItemName
+                };
+
                 // Business logic to start the auction
                 if (!biddingRoom.IsAuctionActive)
                 {

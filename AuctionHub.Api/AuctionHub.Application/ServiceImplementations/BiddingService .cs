@@ -18,12 +18,22 @@ namespace AuctionHub.Application.ServiceImplementations
             _logger = logger;
         }
 
-        public async Task<ApiResponse<BidResponseDto>> SubmitBidAsync(Bid bid)
+        public async Task<ApiResponse<BidResponseDto>> SubmitBidAsync(BidRequestDto bidRequestDto)
         {
             try
             {
+                // Convert BidRequestDto to Bid entity
+                var bid = new Bid
+                {
+                    // Map properties accordingly
+                    Amount = bidRequestDto.Amount,
+                    BiddingRoomId = bidRequestDto.BiddingRoomId,
+                    CreatedBy = bidRequestDto.CreatedBy,
+                    // Add other properties as needed
+                };
+
                 // Business logic to submit a bid
-                var biddingRoom = await _unitOfWork.BiddingRooms.GetBiddingRoomWithWinningBidAsync(bid.BiddingRoomId);
+                var biddingRoom = await _unitOfWork.BiddingRooms.GetBiddingRoomWithWinningBidAsync(bidRequestDto.BiddingRoomId);
 
                 if (biddingRoom.IsAuctionActive && biddingRoom.EndTime > DateTime.UtcNow)
                 {
@@ -70,49 +80,5 @@ namespace AuctionHub.Application.ServiceImplementations
                 return ApiResponse<BidResponseDto>.Failed(false, "Error occurred while submitting a bid.", 500, new List<string> { ex.Message });
             }
         }
-
-
-        //    public async Task<ApiResponse<BidResponseDto>> SubmitBidAsync(Bid bid)
-        //    {
-        //        try
-        //        {
-        //            // Business logic to submit a bid
-        //            var biddingRoom = await _unitOfWork.BiddingRooms.GetBiddingRoomWithWinningBidAsync(bid.BiddingRoomId);
-
-        //            if (biddingRoom.IsAuctionActive && biddingRoom.EndTime > DateTime.UtcNow)
-        //            {
-        //                biddingRoom.Bids.Add(bid);
-
-        //                // Determine the winning bid logic
-        //                var winningBid = biddingRoom.Bids.OrderByDescending(b => b.Amount).FirstOrDefault();
-
-        //                if (winningBid != null)
-        //                {
-        //                    biddingRoom.WinningBidId = winningBid.Id;
-
-        //                    await _unitOfWork.Bids.CreateBidAsync(bid);
-        //                    await _unitOfWork.BiddingRooms.UpdateBiddingRoomAsync(biddingRoom);
-        //                    _unitOfWork.SaveChanges();
-
-        //                    return ApiResponse<BidResponseDto>.Success(true, "Bid submitted successfully.", 200);
-        //                }
-        //                else
-        //                {
-        //                    // Handle scenario where there are no bids yet
-        //                    return ApiResponse<BidResponseDto>.Failed(false, "No bids submitted yet.", 400, new List<string> { "No bids submitted yet." });
-        //                }
-        //            }
-        //            else
-        //            {
-        //                // Handle bid submission outside of active auction time
-        //                return ApiResponse<BidResponseDto>.Failed(false, "Auction is not active or has ended.", 400, new List<string> { "Auction is not active or has ended." });
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            _logger.LogError(ex, "Error occurred while submitting a bid.");
-        //            return ApiResponse<BidResponseDto>.Failed(false, "Error occurred while submitting a bid.", 500, new List<string> { ex.Message });
-        //        }
-        //    }
     }
 }

@@ -6,6 +6,6 @@ namespace AuctionHub.Application.Interfaces.Services
 {
     public interface IBiddingService
     {
-        Task<ApiResponse<BidResponseDto>> SubmitBidAsync(Bid bid);
+        Task<ApiResponse<BidResponseDto>> SubmitBidAsync(BidRequestDto bidRequestDto);
     }
 }

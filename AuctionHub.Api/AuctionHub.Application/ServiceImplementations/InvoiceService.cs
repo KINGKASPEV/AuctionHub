@@ -1,4 +1,5 @@
-﻿using AuctionHub.Application.DTOs.Invoice;
+﻿using AuctionHub.Application.DTOs.BiddingRoom;
+using AuctionHub.Application.DTOs.Invoice;
 using AuctionHub.Application.Interfaces.Repositories;
 using AuctionHub.Application.Interfaces.Services;
 using AuctionHub.Domain;
@@ -19,15 +20,15 @@ namespace AuctionHub.Application.ServiceImplementations
                 _logger = logger;
             }
 
-            public async Task<ApiResponse<InvoiceResponseDto>> GenerateInvoiceAsync(BiddingRoom biddingRoom)
+            public async Task<ApiResponse<InvoiceResponseDto>> GenerateInvoiceAsync(BiddingRoomRequestDto BiddingRoomRequestDto)
             {
                 try
                 {
                     // Business logic to generate an invoice for the highest bidder
                     var invoice = new Invoice
                     {
-                        BiddingRoomId = biddingRoom.Id,
-                        WinningBidId = biddingRoom.WinningBidId
+                        BiddingRoomId = BiddingRoomRequestDto.Id,
+                        WinningBidId = BiddingRoomRequestDto.WinningBidId
                     };
 
                     await _unitOfWork.Invoices.CreateInvoiceAsync(invoice);
