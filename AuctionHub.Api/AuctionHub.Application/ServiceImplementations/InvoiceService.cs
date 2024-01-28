@@ -10,48 +10,46 @@ namespace AuctionHub.Application.ServiceImplementations
 {
 
     public class InvoiceService : IInvoiceService
+    {
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly ILogger<InvoiceService> _logger;
+
+        public InvoiceService(IUnitOfWork unitOfWork, ILogger<InvoiceService> logger)
         {
-            private readonly IUnitOfWork _unitOfWork;
-            private readonly ILogger<InvoiceService> _logger;
+            _unitOfWork = unitOfWork;
+            _logger = logger;
+        }
 
-            public InvoiceService(IUnitOfWork unitOfWork, ILogger<InvoiceService> logger)
+        public async Task<ApiResponse<InvoiceResponseDto>> GenerateInvoiceAsync(string biddingRoomId, string winningBidId, BiddingRoomRequestDto biddingRoomRequestDto)
+        {
+            try
             {
-                _unitOfWork = unitOfWork;
-                _logger = logger;
+                // Business logic to generate an invoice for the highest bidder
+                var invoice = new Invoice
+                {
+                    BiddingRoomId = biddingRoomId,
+                    WinningBidId = winningBidId
+                };
+
+                await _unitOfWork.Invoices.CreateInvoiceAsync(invoice);
+                _unitOfWork.SaveChanges();
+
+                // Populate InvoiceResponseDto with relevant data
+                var invoiceResponseDto = new InvoiceResponseDto
+                {
+                    InvoiceId = invoice.Id,
+                    BiddingRoomId = invoice.BiddingRoomId,
+                    WinningBidId = invoice.WinningBidId,
+                    CreatedAt = invoice.CreatedAt
+                };
+
+                return ApiResponse<InvoiceResponseDto>.Success(invoiceResponseDto, "Invoice generated successfully.", 200);
             }
-
-            public async Task<ApiResponse<InvoiceResponseDto>> GenerateInvoiceAsync(BiddingRoomRequestDto BiddingRoomRequestDto)
+            catch (Exception ex)
             {
-                try
-                {
-                    // Business logic to generate an invoice for the highest bidder
-                    var invoice = new Invoice
-                    {
-                        BiddingRoomId = BiddingRoomRequestDto.BiddingRoomId,
-                        WinningBidId = BiddingRoomRequestDto.WinningBidId
-                    };
-
-                    await _unitOfWork.Invoices.CreateInvoiceAsync(invoice);
-                    _unitOfWork.SaveChanges();
-
-                    // Populate InvoiceResponseDto with relevant data
-                    var invoiceResponseDto = new InvoiceResponseDto
-                    {
-                        InvoiceId = invoice.Id,
-                        BiddingRoomId = invoice.BiddingRoomId,
-                        WinningBidId = invoice.WinningBidId,
-                        //Payments = invoice.Payments,
-                        CreatedAt = invoice.CreatedAt
-                    };
-
-                    return ApiResponse<InvoiceResponseDto>.Success(invoiceResponseDto, "Invoice generated successfully.", 200);
-                }
-                catch (Exception ex)
-                {
-                    _logger.LogError(ex, "Error occurred while generating an invoice.");
-                    return ApiResponse<InvoiceResponseDto>.Failed(false, "Error occurred while generating an invoice.", 500, new List<string> { ex.Message });
-                }
+                _logger.LogError(ex, "Error occurred while generating an invoice.");
+                return ApiResponse<InvoiceResponseDto>.Failed(false, "Error occurred while generating an invoice.", 500, new List<string> { ex.Message });
             }
         }
-    
+    }
 }

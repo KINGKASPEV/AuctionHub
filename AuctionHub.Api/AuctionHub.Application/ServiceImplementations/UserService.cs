@@ -22,7 +22,6 @@ namespace AuctionHub.Application.ServiceImplementations
         {
             try
             {
-                // Check if the user with the provided email already exists
                 var existingUser = await _unitOfWork.User.GetUserByEmailAsync(userRequest.Email);
 
                 if (existingUser != null)
@@ -31,18 +30,15 @@ namespace AuctionHub.Application.ServiceImplementations
                         new List<string> { "User with this email already exists." });
                 }
 
-                // Create a new AppUser entity
                 var newUser = new AppUser
                 {
                     Email = userRequest.Email,
                     CreatedAt = DateTime.UtcNow,
                 };
 
-                // Add the new user to the repository
                 await _unitOfWork.User.AddAsync(newUser);
                   _unitOfWork.SaveChanges();
 
-                // Create the response DTO
                 var userResponseDto = new AppUserResponseDto
                 {
                     UserId = newUser.Id,
@@ -64,7 +60,6 @@ namespace AuctionHub.Application.ServiceImplementations
         {
             try
             {
-                // Retrieve the user from the database
                 var existingUser = await _unitOfWork.User.GetUserByIdAsync(userId);
 
                 if (existingUser == null)
@@ -72,14 +67,11 @@ namespace AuctionHub.Application.ServiceImplementations
                     return ApiResponse<AppUserResponseDto>.Failed(false, "User not found.", 404, new List<string> { "User not found." });
                 }
 
-                // Update user properties
                 existingUser.Email = userRequest.Email;
 
-                // Update the user in the database
                  _unitOfWork.User.Update(existingUser);
                 _unitOfWork.SaveChanges();
 
-                // Map the updated user to the response DTO
                 var responseDto = new AppUserResponseDto
                 {
                     UserId = existingUser.Id,
@@ -100,24 +92,13 @@ namespace AuctionHub.Application.ServiceImplementations
         {
             try
             {
-                // Log the userId
-                _logger.LogInformation($"Trying to retrieve user by ID: {userId}");
-
-                // Retrieve the user from the database
                 var existingUser = await _unitOfWork.User.GetUserByIdAsync(userId);
 
                 if (existingUser == null)
                 {
-                    // Log when the user is not found
-                    _logger.LogInformation($"User not found with ID: {userId}");
-
                     return ApiResponse<AppUserResponseDto>.Failed(false, "User not found.", 404, new List<string> { "User not found." });
                 }
 
-                // Log when the user is found
-                _logger.LogInformation($"User found with ID: {userId}");
-
-                // Map the user to the response DTO
                 var responseDto = new AppUserResponseDto
                 {
                     UserId = existingUser.Id,
@@ -129,7 +110,6 @@ namespace AuctionHub.Application.ServiceImplementations
             }
             catch (Exception ex)
             {
-                // Log the exception
                 _logger.LogError(ex, "Error occurred while getting a user by ID.");
                 return ApiResponse<AppUserResponseDto>.Failed(false, "Error occurred while getting a user by ID.", 500, new List<string> { ex.Message });
             }
@@ -140,7 +120,6 @@ namespace AuctionHub.Application.ServiceImplementations
         {
             try
             {
-                // Retrieve the user from the database
                 var existingUser = await _unitOfWork.User.GetUserByIdAsync(userId);
 
                 if (existingUser == null)
@@ -148,7 +127,6 @@ namespace AuctionHub.Application.ServiceImplementations
                     return ApiResponse<bool>.Failed(false, "User not found.", 404, new List<string> { "User not found." });
                 }
 
-                // Delete the user from the database
                 _unitOfWork.User.Delete(existingUser);
                 _unitOfWork.SaveChanges();
 

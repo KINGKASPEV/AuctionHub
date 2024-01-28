@@ -17,9 +17,9 @@ namespace AuctionHub.Controllers
         }
 
         [HttpPost("submit-bid")]
-        public async Task<IActionResult> SubmitBidAsync([FromBody] BidRequestDto BidRequestDto)
+        public async Task<IActionResult> SubmitBidAsync(string biddingRoomId, [FromBody] BidRequestDto bidRequestDto)
         {
-            var response = await _biddingService.SubmitBidAsync(BidRequestDto);
+            var response = await _biddingService.SubmitBidAsync(biddingRoomId, bidRequestDto);
 
             if (response.Succeeded)
             {
@@ -28,5 +28,6 @@ namespace AuctionHub.Controllers
 
             return BadRequest(response);
         }
+
     }
 }

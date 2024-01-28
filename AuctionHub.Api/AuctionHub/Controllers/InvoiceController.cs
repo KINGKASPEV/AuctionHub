@@ -16,10 +16,10 @@ namespace AuctionHub.Controllers
             _invoiceService = invoiceService;
         }
 
-        [HttpPost("generate-invoice")]
-        public async Task<IActionResult> GenerateInvoiceAsync([FromBody] BiddingRoomRequestDto BiddingRoomRequestDto)
+        [HttpPost("generate-invoice/{biddingRoomId}/{winningBidId}")]
+        public async Task<IActionResult> GenerateInvoiceAsync(string biddingRoomId, string winningBidId, [FromBody] BiddingRoomRequestDto biddingRoomRequestDto)
         {
-            var response = await _invoiceService.GenerateInvoiceAsync(BiddingRoomRequestDto);
+            var response = await _invoiceService.GenerateInvoiceAsync(biddingRoomId, winningBidId, biddingRoomRequestDto);
 
             if (response.Succeeded)
             {
@@ -28,5 +28,6 @@ namespace AuctionHub.Controllers
 
             return BadRequest(response);
         }
+
     }
 }

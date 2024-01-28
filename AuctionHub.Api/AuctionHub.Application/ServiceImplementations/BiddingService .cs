@@ -18,7 +18,7 @@ namespace AuctionHub.Application.ServiceImplementations
             _logger = logger;
         }
 
-        public async Task<ApiResponse<BidResponseDto>> SubmitBidAsync(BidRequestDto bidRequestDto)
+        public async Task<ApiResponse<BidResponseDto>> SubmitBidAsync(string biddingRoomId, BidRequestDto bidRequestDto)
         {
             try
             {
@@ -27,13 +27,13 @@ namespace AuctionHub.Application.ServiceImplementations
                 {
                     // Map properties accordingly
                     Amount = bidRequestDto.Amount,
-                    BiddingRoomId = bidRequestDto.BiddingRoomId,
+                    BiddingRoomId = biddingRoomId,
                     CreatedBy = bidRequestDto.CreatedBy,
                     // Add other properties as needed
                 };
 
                 // Business logic to submit a bid
-                var biddingRoom = await _unitOfWork.BiddingRooms.GetBiddingRoomWithWinningBidAsync(bidRequestDto.BiddingRoomId);
+                var biddingRoom = await _unitOfWork.BiddingRooms.GetBiddingRoomWithWinningBidAsync(biddingRoomId);
 
                 if (biddingRoom.IsAuctionActive && biddingRoom.EndTime > DateTime.UtcNow)
                 {
