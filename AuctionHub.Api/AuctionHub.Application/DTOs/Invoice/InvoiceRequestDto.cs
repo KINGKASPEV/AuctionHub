@@ -1,4 +1,5 @@
-﻿using AuctionHub.Domain.Entities;
+﻿using AuctionHub.Application.DTOs.Bids;
+using AuctionHub.Domain.Entities;
 
 namespace AuctionHub.Application.DTOs.Invoice
 {
@@ -6,6 +7,6 @@ namespace AuctionHub.Application.DTOs.Invoice
     {
         public string InvoiceId { get; set; }
         public string BuyerEmail { get; set; }
-        public Bid WinningBid { get; set; }
+        public BidRequestDto WinningBid { get; set; }
     }
 }

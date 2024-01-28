@@ -27,7 +27,7 @@ namespace AuctionHub.Application.ServiceImplementations
                     // Business logic to generate an invoice for the highest bidder
                     var invoice = new Invoice
                     {
-                        BiddingRoomId = BiddingRoomRequestDto.Id,
+                        BiddingRoomId = BiddingRoomRequestDto.BiddingRoomId,
                         WinningBidId = BiddingRoomRequestDto.WinningBidId
                     };
 
