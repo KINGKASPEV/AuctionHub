@@ -23,7 +23,7 @@ namespace AuctionHub.Application.ServiceImplementations
             {
                 Amount = amount,
                 Email = email,
-                Currency = "NGN", // Change based on your currency
+                Currency = "NGN", 
                 Reference = Guid.NewGuid().ToString("N")
             };
 

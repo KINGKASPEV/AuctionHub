@@ -22,24 +22,24 @@ namespace AuctionHub.Application.ServiceImplementations
         {
             try
             {
-                // Convert BidRequestDto to Bid entity
                 var bid = new Bid
                 {
-                    // Map properties accordingly
                     Amount = bidRequestDto.Amount,
                     BiddingRoomId = biddingRoomId,
                     CreatedBy = bidRequestDto.CreatedBy,
-                    // Add other properties as needed
                 };
 
-                // Business logic to submit a bid
                 var biddingRoom = await _unitOfWork.BiddingRooms.GetBiddingRoomWithWinningBidAsync(biddingRoomId);
+
+                if (biddingRoom == null)
+                {
+                    return ApiResponse<BidResponseDto>.Failed(false, "Bidding room not found.", 404, new List<string> { "Bidding room not found." });
+                }
 
                 if (biddingRoom.IsAuctionActive && biddingRoom.EndTime > DateTime.UtcNow)
                 {
                     biddingRoom.Bids.Add(bid);
 
-                    // Determine the winning bid logic
                     var winningBid = biddingRoom.Bids.OrderByDescending(b => b.Amount).FirstOrDefault();
 
                     if (winningBid != null)
@@ -50,7 +50,6 @@ namespace AuctionHub.Application.ServiceImplementations
                         await _unitOfWork.BiddingRooms.UpdateBiddingRoomAsync(biddingRoom);
                         _unitOfWork.SaveChanges();
 
-                        // Populate BidResponseDto with relevant data
                         var bidResponseDto = new BidResponseDto
                         {
                             Amount = winningBid.Amount,
@@ -64,13 +63,11 @@ namespace AuctionHub.Application.ServiceImplementations
                     }
                     else
                     {
-                        // Handle scenario where there are no bids yet
                         return ApiResponse<BidResponseDto>.Failed(false, "No bids submitted yet.", 400, new List<string> { "No bids submitted yet." });
                     }
                 }
                 else
                 {
-                    // Handle bid submission outside of active auction time
                     return ApiResponse<BidResponseDto>.Failed(false, "Auction is not active or has ended.", 400, new List<string> { "Auction is not active or has ended." });
                 }
             }

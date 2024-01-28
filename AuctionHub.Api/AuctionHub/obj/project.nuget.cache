@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NElzDLLAbJ1A8A06TbAWJLrAkxxc2npAz2faBCsiI5qb/7mUeKeqHgSGrCIGKjzOx7Zpu+DdEV7SwfdjwR/DTw==",
+  "dgSpecHash": "PqdmL2PdLhatgPelpSI8AiRypqzDjmdhifWQgtAe6ujA70oh8uJ1zzsmeXTtJKxlyP9lcJB+91+K9d3xOeykbQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\My-project\\AuctionHub\\AuctionHub.Api\\AuctionHub\\AuctionHub.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,7 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.4\\microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",

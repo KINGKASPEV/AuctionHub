@@ -24,7 +24,6 @@ namespace AuctionHub.Application.ServiceImplementations
         {
             try
             {
-                // Business logic to notify participants of a new bid
                 var notification = new Notification
                 {
                     Message = $"New bid of {bidRequestDto.Amount} submitted.",
@@ -34,7 +33,6 @@ namespace AuctionHub.Application.ServiceImplementations
                 await _unitOfWork.Notifications.CreateNotificationAsync(notification);
                 _unitOfWork.SaveChanges();
 
-                // Populate NotificationResponseDto with relevant data
                 var notificationResponseDto = new NotificationResponseDto
                 {
                     Message = notification.Message,
@@ -54,7 +52,6 @@ namespace AuctionHub.Application.ServiceImplementations
         {
             try
             {
-                // Business logic to notify participants of auction conclusion
                 var notification = new Notification
                 {
                     Message = $"Auction for item '{biddingRoomRequestDto.ItemName}' has concluded. Winner: {biddingRoomRequestDto.WinningBid.Amount}.",
@@ -64,7 +61,6 @@ namespace AuctionHub.Application.ServiceImplementations
                 await _unitOfWork.Notifications.CreateNotificationAsync(notification);
                 _unitOfWork.SaveChanges();
 
-                // Populate NotificationResponseDto with relevant data
                 var notificationResponseDto = new NotificationResponseDto
                 {
                     Message = notification.Message,

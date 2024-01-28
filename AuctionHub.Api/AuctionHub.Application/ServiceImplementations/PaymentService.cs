@@ -26,28 +26,24 @@ namespace AuctionHub.Application.ServiceImplementations
         {
             try
             {
-                // Call Paystack to initialize the payment
                 var initializeResponse = await _paystackService.InitializePaymentAsync(InvoiceRequestDto.WinningBid.Amount, InvoiceRequestDto.BuyerEmail);
 
-                // Check if the payment initialization was successful
                 if (!initializeResponse.Status)
                 {
                     return ApiResponse<PaymentResponseDto>.Failed(false, initializeResponse.Message, 400, new List<string> { initializeResponse.Message });
                 }
 
-                // Save the payment information in your database
                 var payment = new Payment
                 {
                     InvoiceId = InvoiceRequestDto.InvoiceId,
                     PaymentAmount = InvoiceRequestDto.WinningBid.Amount,
                     PaymentStatus = PaymentStatus.Pending,
-                    PaystackReference = initializeResponse.Data.Reference // Store this reference for verification
+                    PaystackReference = initializeResponse.Data.Reference
                 };
 
                 await _unitOfWork.Payments.CreatePaymentAsync(payment);
                 _unitOfWork.SaveChanges();
 
-                // Redirect the user to the Paystack payment page
                 var paymentResponseDto = new PaymentResponseDto
                 {
                     PaymentId = payment.Id,

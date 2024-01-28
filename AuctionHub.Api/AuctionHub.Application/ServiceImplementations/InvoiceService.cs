@@ -24,7 +24,6 @@ namespace AuctionHub.Application.ServiceImplementations
         {
             try
             {
-                // Business logic to generate an invoice for the highest bidder
                 var invoice = new Invoice
                 {
                     BiddingRoomId = biddingRoomId,
@@ -34,7 +33,6 @@ namespace AuctionHub.Application.ServiceImplementations
                 await _unitOfWork.Invoices.CreateInvoiceAsync(invoice);
                 _unitOfWork.SaveChanges();
 
-                // Populate InvoiceResponseDto with relevant data
                 var invoiceResponseDto = new InvoiceResponseDto
                 {
                     InvoiceId = invoice.Id,

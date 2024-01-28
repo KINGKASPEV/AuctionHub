@@ -21,7 +21,6 @@ namespace AuctionHub.Application.ServiceImplementations
         {
             try
             {
-                // Map properties from BiddingRoomRequestDto to BiddingRoom entity
                 var biddingRoom = new BiddingRoom
                 {
                     RoomName = biddingRoomRequestDto.RoomName,
@@ -30,11 +29,10 @@ namespace AuctionHub.Application.ServiceImplementations
                     ItemName = biddingRoomRequestDto.ItemName
                 };
 
-                // Business logic to start the auction
                 if (!biddingRoom.IsAuctionActive)
                 {
                     biddingRoom.IsAuctionActive = true;
-                    biddingRoom.EndTime = DateTime.UtcNow.AddHours(1); // Adjust the end time based on your requirements
+                    biddingRoom.EndTime = DateTime.UtcNow.AddHours(1);
 
                     await _unitOfWork.BiddingRooms.UpdateBiddingRoomAsync(biddingRoom);
                     _unitOfWork.SaveChanges();
