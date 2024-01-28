@@ -15,6 +15,7 @@ namespace AuctionHub.ServiceExtensions
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IBiddingRoomRepository, BiddingRoomRepository>();
             services.AddScoped<IBidRepository, BidRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IInvoiceRepository, InvoiceRepository>();
             services.AddScoped<INotificationRepository, NotificationRepository>();
             services.AddScoped<IPaymentRepository, PaymentRepository>();
@@ -22,6 +23,7 @@ namespace AuctionHub.ServiceExtensions
             services.AddScoped<IBiddingService, BiddingService>();
             services.AddScoped<INotificationService, NotificationService>();
             services.AddScoped<IInvoiceService, InvoiceService>();
+            services.AddScoped<IUserService, UserService>();
             services.AddScoped<IPaymentService, PaymentService>();
             services.AddScoped<PaystackService>();
             services.AddHttpClient();

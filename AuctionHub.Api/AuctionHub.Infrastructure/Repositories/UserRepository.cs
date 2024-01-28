@@ -8,7 +8,7 @@ namespace AuctionHub.Infrastructure.Repositories
     {
         public UserRepository(AuctionHubDbContext dbContext) : base(dbContext) { }
 
-        public async Task<AppUser> GetUserByIdAsync(string userId) => await _dbContext.Users.FindAsync(userId);
-        public async Task<AppUser> GetUserByEmailAsync(string email) => await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
+        public async Task<AppUser> GetUserByIdAsync(string userId) => await _dbContext.Users.FirstOrDefaultAsync(u => u.Id == userId);
+        public async Task<AppUser> GetUserByEmailAsync(string email) => await _dbContext.Users.SingleOrDefaultAsync(u => u.Email == email);
     }
 }
