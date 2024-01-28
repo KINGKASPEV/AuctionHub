@@ -6,7 +6,8 @@ namespace AuctionHub.Domain.Entities
     {
         public string InvoiceId { get; set; }
         public Invoice Invoice { get; set; }
-        public int PaymentAmount { get; set; } 
+        public int PaymentAmount { get; set; }
+        public string PaystackReference { get; set; }
         public PaymentStatus PaymentStatus { get; set; } 
     }
 }

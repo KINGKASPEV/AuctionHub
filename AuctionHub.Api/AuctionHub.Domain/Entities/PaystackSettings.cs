@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AuctionHub.Domain.Entities
+﻿namespace AuctionHub.Domain.Entities
 {
-    internal class PaystackSettings
+    public class PaystackSettings
     {
+        public string ApiKey { get; set; }
     }
 }

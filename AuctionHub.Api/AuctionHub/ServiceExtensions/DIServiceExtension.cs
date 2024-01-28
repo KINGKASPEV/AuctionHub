@@ -1,6 +1,7 @@
 ﻿using AuctionHub.Application.Interfaces.Repositories;
 using AuctionHub.Application.Interfaces.Services;
 using AuctionHub.Application.ServiceImplementations;
+using AuctionHub.Domain.Entities;
 using AuctionHub.Infrastructure;
 using AuctionHub.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -22,8 +23,11 @@ namespace AuctionHub.ServiceExtensions
             services.AddScoped<INotificationService, NotificationService>();
             services.AddScoped<IInvoiceService, InvoiceService>();
             services.AddScoped<IPaymentService, PaymentService>();
+            services.AddScoped<PaystackService>();
+            services.AddHttpClient();
             services.AddDbContext<AuctionHubDbContext>(options =>
             options.UseSqlite(config.GetConnectionString("DefaultConnection")));
+            services.Configure<PaystackSettings>(config.GetSection("PaystackSettings"));
         }
     }
 }

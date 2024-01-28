@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AuctionHub.Application.DTOs
+﻿namespace AuctionHub.Application.DTOs.Paystack
 {
-    internal class PaystackInitializeRequest
+    public class PaystackInitializeRequest
     {
+        public decimal Amount { get; set; }
+        public string Email { get; set; }
+        public string Currency { get; set; }
+        public string Reference { get; set; }
     }
 }

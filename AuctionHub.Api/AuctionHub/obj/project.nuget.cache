@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NxBuDhAE2vy1b0BIIkvVjwtPe/xVGRxpfnHAliR6XWzQHTTceIfiBnlf/MmQDpWJYrXK5Az6ODzA71i9x4v6TA==",
+  "dgSpecHash": "NElzDLLAbJ1A8A06TbAWJLrAkxxc2npAz2faBCsiI5qb/7mUeKeqHgSGrCIGKjzOx7Zpu+DdEV7SwfdjwR/DTw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\My-project\\AuctionHub\\AuctionHub.Api\\AuctionHub\\AuctionHub.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,8 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\paystack.net\\1.1.0\\paystack.net.1.1.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\rabbitmq.client\\6.8.1\\rabbitmq.client.6.8.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\serilog.aspnetcore\\7.0.0\\serilog.aspnetcore.7.0.0.nupkg.sha512",

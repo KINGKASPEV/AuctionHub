@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AuctionHub.Application.DTOs
+﻿namespace AuctionHub.Application.DTOs.Paystack
 {
-    internal class PaystackTransactionData
+    public class PaystackTransactionData
     {
+        public string Reference { get; set; }
+        public string AuthorizationUrl { get; set; }
     }
 }
