@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AuctionHub.Application.DTOs.AppUser;
+using AuctionHub.Domain;
 
 namespace AuctionHub.Application.Interfaces.Services
 {
-    internal class IUserService
+    public interface IUserService
     {
+        Task<ApiResponse<AppUserResponseDto>> CreateUserAsync(AppUserRequestDto userRequest);
+        Task<ApiResponse<AppUserResponseDto>> UpdateUserAsync(string userId, AppUserRequestDto userRequest);
+        Task<ApiResponse<AppUserResponseDto>> GetUserByIdAsync(string userId);
+        Task<ApiResponse<bool>> DeleteUserAsync(string userId);
     }
 }

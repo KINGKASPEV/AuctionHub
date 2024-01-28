@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AuctionHub.Application.DTOs.AppUser
+﻿namespace AuctionHub.Application.DTOs.AppUser
 {
-    internal class AppUserResponseDto
+    public class AppUserResponseDto
     {
+        public string UserId { get; set; }
+        public string Email { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }

@@ -2,6 +2,7 @@
 {
     public interface IUnitOfWork
     {
+        IUserRepository User { get; }
         IBiddingRoomRepository BiddingRooms { get; }
         IBidRepository Bids { get; }
         IInvoiceRepository Invoices { get; }

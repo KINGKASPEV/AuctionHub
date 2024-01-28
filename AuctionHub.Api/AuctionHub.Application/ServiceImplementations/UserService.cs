@@ -36,8 +36,6 @@ namespace AuctionHub.Application.ServiceImplementations
                 {
                     Email = userRequest.Email,
                     CreatedAt = DateTime.UtcNow,
-                    UpdatedAt = DateTime.UtcNow
-                    // You may set other properties here
                 };
 
                 // Add the new user to the repository
