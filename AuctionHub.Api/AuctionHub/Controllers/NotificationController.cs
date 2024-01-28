@@ -1,4 +1,6 @@
-﻿using AuctionHub.Application.Interfaces.Services;
+﻿using AuctionHub.Application.DTOs.BiddingRoom;
+using AuctionHub.Application.DTOs.Bids;
+using AuctionHub.Application.Interfaces.Services;
 using AuctionHub.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,9 +18,9 @@ namespace AuctionHub.Controllers
         }
 
         [HttpPost("notify-participants")]
-        public async Task<IActionResult> NotifyParticipantsAsync([FromBody] Bid bid)
+        public async Task<IActionResult> NotifyParticipantsAsync([FromBody] BidRequestDto BidRequestDto)
         {
-            var response = await _notificationService.NotifyParticipantsAsync(bid);
+            var response = await _notificationService.NotifyParticipantsAsync(BidRequestDto);
 
             if (response.Succeeded)
             {
@@ -29,9 +31,9 @@ namespace AuctionHub.Controllers
         }
 
         [HttpPost("notify-auction-conclusion")]
-        public async Task<IActionResult> NotifyAuctionConclusionAsync([FromBody] BiddingRoom biddingRoom)
+        public async Task<IActionResult> NotifyAuctionConclusionAsync([FromBody] BiddingRoomRequestDto BiddingRoomRequestDto)
         {
-            var response = await _notificationService.NotifyAuctionConclusionAsync(biddingRoom);
+            var response = await _notificationService.NotifyAuctionConclusionAsync(BiddingRoomRequestDto);
 
             if (response.Succeeded)
             {

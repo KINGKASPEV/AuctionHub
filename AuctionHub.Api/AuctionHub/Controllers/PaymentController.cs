@@ -1,4 +1,5 @@
-﻿using AuctionHub.Application.Interfaces.Services;
+﻿using AuctionHub.Application.DTOs.Invoice;
+using AuctionHub.Application.Interfaces.Services;
 using AuctionHub.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,9 +17,9 @@ namespace AuctionHub.Controllers
         }
 
         [HttpPost("process-payment")]
-        public async Task<IActionResult> ProcessPaymentAsync([FromBody] Invoice invoice)
+        public async Task<IActionResult> ProcessPaymentAsync([FromBody] InvoiceRequestDto InvoiceRequestDto)
         {
-            var response = await _paymentService.ProcessPaymentAsync(invoice);
+            var response = await _paymentService.ProcessPaymentAsync(InvoiceRequestDto);
 
             if (response.Succeeded)
             {

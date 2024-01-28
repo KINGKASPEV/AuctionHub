@@ -1,6 +1,6 @@
-﻿namespace AuctionHub.Domain.Entities
+﻿namespace AuctionHub.Application.DTOs.Notifications
 {
-    public class Notification : BaseEntity
+    public class NotificationRequestDto
     {
         public string Message { get; set; }
         public DateTime NotificationTime { get; set; } = DateTime.UtcNow;

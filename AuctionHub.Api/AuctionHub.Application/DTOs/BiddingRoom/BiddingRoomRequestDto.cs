@@ -1,9 +1,12 @@
-﻿namespace AuctionHub.Application.DTOs.BiddingRoom
+﻿using AuctionHub.Domain.Entities;
+
+namespace AuctionHub.Application.DTOs.BiddingRoom
 {
     public class BiddingRoomRequestDto
     {
         public string Id { get; set; }
         public string WinningBidId { get; set; }
+        public Bid WinningBid { get; set; }
         public string RoomName { get; set; }
         public bool IsAuctionActive { get; set; }
         public DateTime? EndTime { get; set; }

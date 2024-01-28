@@ -4,6 +4,8 @@ using AuctionHub.Domain;
 using Microsoft.Extensions.Logging;
 using AuctionHub.Application.Interfaces.Services;
 using AuctionHub.Application.DTOs.Notifications;
+using AuctionHub.Application.DTOs.Bids;
+using AuctionHub.Application.DTOs.BiddingRoom;
 
 namespace AuctionHub.Application.ServiceImplementations
 {
@@ -18,14 +20,14 @@ namespace AuctionHub.Application.ServiceImplementations
             _logger = logger;
         }
 
-        public async Task<ApiResponse<NotificationResponseDto>> NotifyParticipantsAsync(Bid bid)
+        public async Task<ApiResponse<NotificationResponseDto>> NotifyParticipantsAsync(BidRequestDto BidRequestDto)
         {
             try
             {
                 // Business logic to notify participants of a new bid
                 var notification = new Notification
                 {
-                    Message = $"New bid of {bid.Amount} submitted.",
+                    Message = $"New bid of {BidRequestDto.Amount} submitted.",
                     NotificationTime = DateTime.UtcNow
                 };
 
@@ -48,14 +50,14 @@ namespace AuctionHub.Application.ServiceImplementations
             }
         }
 
-        public async Task<ApiResponse<NotificationResponseDto>> NotifyAuctionConclusionAsync(BiddingRoom biddingRoom)
+        public async Task<ApiResponse<NotificationResponseDto>> NotifyAuctionConclusionAsync(BiddingRoomRequestDto BiddingRoomRequestDto)
         {
             try
             {
                 // Business logic to notify participants of auction conclusion
                 var notification = new Notification
                 {
-                    Message = $"Auction for item '{biddingRoom.ItemName}' has concluded. Winner: {biddingRoom.WinningBid.Amount}.",
+                    Message = $"Auction for item '{BiddingRoomRequestDto.ItemName}' has concluded. Winner: {BiddingRoomRequestDto.WinningBid.Amount}.",
                     NotificationTime = DateTime.UtcNow
                 };
 

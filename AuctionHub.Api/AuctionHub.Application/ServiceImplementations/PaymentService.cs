@@ -1,4 +1,5 @@
-﻿using AuctionHub.Application.DTOs.Payment;
+﻿using AuctionHub.Application.DTOs.Invoice;
+using AuctionHub.Application.DTOs.Payment;
 using AuctionHub.Application.Interfaces.Repositories;
 using AuctionHub.Application.Interfaces.Services;
 using AuctionHub.Domain;
@@ -21,12 +22,12 @@ namespace AuctionHub.Application.ServiceImplementations
             _paystackService = paystackService;
         }
 
-        public async Task<ApiResponse<PaymentResponseDto>> ProcessPaymentAsync(Invoice invoice)
+        public async Task<ApiResponse<PaymentResponseDto>> ProcessPaymentAsync(InvoiceRequestDto InvoiceRequestDto)
         {
             try
             {
                 // Call Paystack to initialize the payment
-                var initializeResponse = await _paystackService.InitializePaymentAsync(invoice.WinningBid.Amount, invoice.BuyerEmail);
+                var initializeResponse = await _paystackService.InitializePaymentAsync(InvoiceRequestDto.WinningBid.Amount, InvoiceRequestDto.BuyerEmail);
 
                 // Check if the payment initialization was successful
                 if (!initializeResponse.Status)
@@ -37,8 +38,8 @@ namespace AuctionHub.Application.ServiceImplementations
                 // Save the payment information in your database
                 var payment = new Payment
                 {
-                    InvoiceId = invoice.Id,
-                    PaymentAmount = invoice.WinningBid.Amount,
+                    InvoiceId = InvoiceRequestDto.InvoiceId,
+                    PaymentAmount = InvoiceRequestDto.WinningBid.Amount,
                     PaymentStatus = PaymentStatus.Pending,
                     PaystackReference = initializeResponse.Data.Reference // Store this reference for verification
                 };
