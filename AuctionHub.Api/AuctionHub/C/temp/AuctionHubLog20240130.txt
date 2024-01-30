@@ -1,0 +1,9 @@
+2024-01-30 00:12:41.039 +00:00 [INF] Now listening on: https://[::]:443
+2024-01-30 00:12:41.193 +00:00 [INF] Now listening on: http://[::]:80
+2024-01-30 00:12:41.214 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-30 00:12:41.219 +00:00 [INF] Hosting environment: Development
+2024-01-30 00:12:41.229 +00:00 [INF] Content root path: /app
+2024-01-30 00:12:46.580 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger/index.html - -
+2024-01-30 00:12:47.565 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger/index.html - - - 200 - text/html;charset=utf-8 1003.3759ms
+2024-01-30 00:12:50.100 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger/v1/swagger.json - -
+2024-01-30 00:12:50.772 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 672.5161ms
