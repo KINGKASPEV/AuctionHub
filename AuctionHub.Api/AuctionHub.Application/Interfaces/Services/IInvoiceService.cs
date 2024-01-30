@@ -6,6 +6,6 @@ namespace AuctionHub.Application.Interfaces.Services
 {
     public interface IInvoiceService
     {
-        Task<ApiResponse<InvoiceResponseDto>> GenerateInvoiceAsync(string biddingRoomId, string winningBidId, BiddingRoomRequestDto biddingRoomRequestDto);
+        Task<ApiResponse<InvoiceResponseDto>> GenerateInvoiceAsync(string biddingRoomId, BiddingRoomRequestDto biddingRoomRequestDto);
     }
 }

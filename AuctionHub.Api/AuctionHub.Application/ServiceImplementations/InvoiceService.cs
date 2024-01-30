@@ -13,17 +13,29 @@ namespace AuctionHub.Application.ServiceImplementations
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger<InvoiceService> _logger;
+        private readonly IBiddingService _biddingService;
 
-        public InvoiceService(IUnitOfWork unitOfWork, ILogger<InvoiceService> logger)
+        public InvoiceService(IUnitOfWork unitOfWork, ILogger<InvoiceService> logger, IBiddingService biddingService)
         {
             _unitOfWork = unitOfWork;
             _logger = logger;
+            _biddingService = biddingService;
         }
 
-        public async Task<ApiResponse<InvoiceResponseDto>> GenerateInvoiceAsync(string biddingRoomId, string winningBidId, BiddingRoomRequestDto biddingRoomRequestDto)
+        // In InvoiceService
+        public async Task<ApiResponse<InvoiceResponseDto>> GenerateInvoiceAsync(string biddingRoomId, BiddingRoomRequestDto biddingRoomRequestDto)
         {
             try
             {
+                // Get the winning bid id
+                var winningBidId = await _biddingService.GetWinningBidIdAsync(biddingRoomId);
+
+                if (winningBidId == null)
+                {
+                    return ApiResponse<InvoiceResponseDto>.Failed(false, "No winning bid found.", 400, new List<string> { "No winning bid found." });
+                }
+
+                // Generate invoice with the winning bid id
                 var invoice = new Invoice
                 {
                     BiddingRoomId = biddingRoomId,
@@ -49,5 +61,35 @@ namespace AuctionHub.Application.ServiceImplementations
                 return ApiResponse<InvoiceResponseDto>.Failed(false, "Error occurred while generating an invoice.", 500, new List<string> { ex.Message });
             }
         }
+
+        //public async Task<ApiResponse<InvoiceResponseDto>> GenerateInvoiceAsync(string biddingRoomId, string winningBidId, BiddingRoomRequestDto biddingRoomRequestDto)
+        //{
+        //    try
+        //    {
+        //        var invoice = new Invoice
+        //        {
+        //            BiddingRoomId = biddingRoomId,
+        //            WinningBidId = winningBidId
+        //        };
+
+        //        await _unitOfWork.Invoices.CreateInvoiceAsync(invoice);
+        //        _unitOfWork.SaveChanges();
+
+        //        var invoiceResponseDto = new InvoiceResponseDto
+        //        {
+        //            InvoiceId = invoice.Id,
+        //            BiddingRoomId = invoice.BiddingRoomId,
+        //            WinningBidId = invoice.WinningBidId,
+        //            CreatedAt = invoice.CreatedAt
+        //        };
+
+        //        return ApiResponse<InvoiceResponseDto>.Success(invoiceResponseDto, "Invoice generated successfully.", 200);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError(ex, "Error occurred while generating an invoice.");
+        //        return ApiResponse<InvoiceResponseDto>.Failed(false, "Error occurred while generating an invoice.", 500, new List<string> { ex.Message });
+        //    }
+        //}
     }
 }

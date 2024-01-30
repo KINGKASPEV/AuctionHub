@@ -77,5 +77,17 @@ namespace AuctionHub.Application.ServiceImplementations
                 return ApiResponse<BidResponseDto>.Failed(false, "Error occurred while submitting a bid.", 500, new List<string> { ex.Message });
             }
         }
+        public async Task<string> GetWinningBidIdAsync(string biddingRoomId)
+        {
+            var biddingRoom = await _unitOfWork.BiddingRooms.GetBiddingRoomWithWinningBidAsync(biddingRoomId);
+
+            // Check if biddingRoom is not null and if it has a winning bid
+            if (biddingRoom != null && !string.IsNullOrEmpty(biddingRoom.WinningBidId))
+            {
+                return biddingRoom.WinningBidId;
+            }
+
+            return null; // or throw an exception or handle it based on your requirements
+        }
     }
 }
