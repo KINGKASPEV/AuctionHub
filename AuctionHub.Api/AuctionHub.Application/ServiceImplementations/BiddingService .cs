@@ -1,6 +1,7 @@
 ﻿using AuctionHub.Application.DTOs.Bids;
 using AuctionHub.Application.Interfaces.Repositories;
 using AuctionHub.Application.Interfaces.Services;
+using AuctionHub.Application.Utilities;
 using AuctionHub.Domain;
 using AuctionHub.Domain.Entities;
 using Microsoft.Extensions.Logging;
@@ -81,13 +82,36 @@ namespace AuctionHub.Application.ServiceImplementations
         {
             var biddingRoom = await _unitOfWork.BiddingRooms.GetBiddingRoomWithWinningBidAsync(biddingRoomId);
 
-            // Check if biddingRoom is not null and if it has a winning bid
             if (biddingRoom != null && !string.IsNullOrEmpty(biddingRoom.WinningBidId))
             {
                 return biddingRoom.WinningBidId;
             }
 
-            return null; // or throw an exception or handle it based on your requirements
+            return null; 
+        }
+
+        public async Task<ApiResponse<IEnumerable<BidResponseDto>>> GetAllBidsAsync()
+        {
+            try
+            {
+                var allBids = await _unitOfWork.Bids.GetAllBidsAsync();
+
+                var bidResponseDtos = allBids.Select(bid => new BidResponseDto
+                {
+                    Amount = bid.Amount,
+                    BidTime = bid.BidTime,
+                    BiddingRoomId = bid.BiddingRoomId,
+                    CreatedAt = bid.CreatedAt,
+                    CreatedBy = bid.CreatedBy
+                });
+
+                return ApiResponse<IEnumerable<BidResponseDto>>.Success(bidResponseDtos, "All bids retrieved successfully.", 200);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while getting all bids.");
+                return ApiResponse<IEnumerable<BidResponseDto>>.Failed(false, "Error occurred while getting all bids.", 500, new List<string> { ex.Message });
+            }
         }
     }
 }

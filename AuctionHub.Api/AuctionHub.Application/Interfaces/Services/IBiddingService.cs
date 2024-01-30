@@ -1,6 +1,5 @@
-﻿using AuctionHub.Domain.Entities;
+﻿using AuctionHub.Application.DTOs.Bids;
 using AuctionHub.Domain;
-using AuctionHub.Application.DTOs.Bids;
 
 namespace AuctionHub.Application.Interfaces.Services
 {
@@ -8,5 +7,6 @@ namespace AuctionHub.Application.Interfaces.Services
     {
         Task<ApiResponse<BidResponseDto>> SubmitBidAsync(string biddingRoomId, BidRequestDto bidRequestDto);
         Task<string> GetWinningBidIdAsync(string biddingRoomId);
+        Task<ApiResponse<IEnumerable<BidResponseDto>>> GetAllBidsAsync();
     }
 }

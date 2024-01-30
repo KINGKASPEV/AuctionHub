@@ -10,7 +10,7 @@ namespace AuctionHub.Controllers
     public class InvoiceController : ControllerBase
     {
         private readonly IInvoiceService _invoiceService;
-        private readonly IBiddingService _biddingService; // Inject the BiddingService to access the GetWinningBidIdAsync method
+        private readonly IBiddingService _biddingService; 
 
         public InvoiceController(IInvoiceService invoiceService, IBiddingService biddingService)
         {

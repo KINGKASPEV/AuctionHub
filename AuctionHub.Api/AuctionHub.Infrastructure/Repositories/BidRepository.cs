@@ -1,4 +1,5 @@
 ﻿using AuctionHub.Application.Interfaces.Repositories;
+using AuctionHub.Application.Utilities;
 using AuctionHub.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -36,6 +37,11 @@ namespace AuctionHub.Infrastructure.Repositories
                 Delete(bid);
                 await SaveChangesAsync();
             }
+        }
+
+        public async Task<List<Bid>> GetAllBidsAsync()
+        {
+            return await _dbContext.Bids.ToListAsync();
         }
     }
 }

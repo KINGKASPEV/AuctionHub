@@ -29,5 +29,17 @@ namespace AuctionHub.Controllers
             return BadRequest(response);
         }
 
+        [HttpGet("get-all-bids")]
+        public async Task<IActionResult> GetAllBidsAsync()
+        {
+            var response = await _biddingService.GetAllBidsAsync();
+
+            if (response.Succeeded)
+            {
+                return Ok(response);
+            }
+
+            return BadRequest(response);
+        }
     }
 }
