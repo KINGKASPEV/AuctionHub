@@ -21,6 +21,7 @@ namespace AuctionHub.ServiceExtensions
             services.AddScoped<IPaymentRepository, PaymentRepository>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IBiddingService, BiddingService>();
+            services.AddScoped<IBiddingRoomService, BiddingRoomService>();
             services.AddScoped<INotificationService, NotificationService>();
             services.AddScoped<IInvoiceService, InvoiceService>();
             services.AddScoped<IUserService, UserService>();

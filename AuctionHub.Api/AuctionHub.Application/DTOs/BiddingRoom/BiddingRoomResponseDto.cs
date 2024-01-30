@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AuctionHub.Application.DTOs.Bids;
 
 namespace AuctionHub.Application.DTOs.BiddingRoom
 {
-    internal class BiddingRoomResponseDto
+    public class BiddingRoomResponseDto
     {
+        public string BiddingRoomId { get; set; }
+        public string RoomName { get; set; }
+        public bool IsAuctionActive { get; set; }
+        public DateTime? EndTime { get; set; }
+        public string ItemName { get; set; }
     }
 }

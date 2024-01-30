@@ -28,5 +28,44 @@ namespace AuctionHub.Controllers
             return BadRequest(response);
         }
 
+        [HttpPost("create-bidding-room")]
+        public async Task<IActionResult> CreateBiddingRoomAsync([FromBody] BiddingRoomRequestDto biddingRoomRequestDto)
+        {
+            var response = await _biddingRoomService.CreateBiddingRoomAsync(biddingRoomRequestDto);
+
+            if (response.Succeeded)
+            {
+                return Ok(response);
+            }
+
+            return BadRequest(response);
+        }
+
+
+        [HttpGet("get-all-bidding-rooms")]
+        public async Task<IActionResult> GetAllBiddingRoomsAsync()
+        {
+            var response = await _biddingRoomService.GetAllBiddingRoomsAsync();
+
+            if (response.Succeeded)
+            {
+                return Ok(response);
+            }
+
+            return BadRequest(response);
+        }
+
+        [HttpDelete("delete-bidding-room/{id}")]
+        public async Task<IActionResult> DeleteBiddingRoomByIdAsync(string id)
+        {
+            var response = await _biddingRoomService.DeleteBiddingRoomByIdAsync(id);
+
+            if (response.Succeeded)
+            {
+                return Ok(response);
+            }
+
+            return BadRequest(response);
+        }
     }
 }
