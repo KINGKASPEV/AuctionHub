@@ -23,7 +23,6 @@ namespace AuctionHub.Controllers
         {
             try
             {
-                // Get the winning bid id
                 var winningBidId = await _biddingService.GetWinningBidIdAsync(biddingRoomId);
 
                 if (winningBidId == null)
@@ -31,7 +30,6 @@ namespace AuctionHub.Controllers
                     return BadRequest("No winning bid found for the specified bidding room.");
                 }
 
-                // Generate invoice with the winning bid id
                 var response = await _invoiceService.GenerateInvoiceAsync(biddingRoomId, biddingRoomRequestDto);
 
                 if (response.Succeeded)
@@ -43,12 +41,10 @@ namespace AuctionHub.Controllers
             }
             catch (Exception ex)
             {
-                // Log or handle the exception as needed
                 return StatusCode(500, "Internal Server Error");
             }
         }
 
-        // Additional endpoint to get the winning bid id
         [HttpGet("get-winning-bid/{biddingRoomId}")]
         public async Task<IActionResult> GetWinningBidIdAsync(string biddingRoomId)
         {
@@ -65,7 +61,6 @@ namespace AuctionHub.Controllers
             }
             catch (Exception ex)
             {
-                // Log or handle the exception as needed
                 return StatusCode(500, "Internal Server Error");
             }
         }

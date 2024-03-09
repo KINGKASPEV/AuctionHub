@@ -1,6 +1,4 @@
-﻿using RabbitMQ.Client;
-
-namespace AuctionHub.Domain.Entities
+﻿namespace AuctionHub.Domain.Entities
 {
     public class RabbitMQConfig
     {
@@ -10,18 +8,18 @@ namespace AuctionHub.Domain.Entities
         public int Port { get; set; }
         public string VirtualHost { get; set; }
 
-        public virtual IConnectionFactory CreateConnectionFactory()
-        {
-            var connectionFactory = new ConnectionFactory
-            {
-                HostName = this.HostName,
-                UserName = this.UserName,
-                Password = this.Password,
-                Port = this.Port,
-                VirtualHost = this.VirtualHost,
-                AutomaticRecoveryEnabled = true
-            };
-            return connectionFactory;
-        }
+        //public virtual IConnectionFactory CreateConnectionFactory()
+        //{
+        //    var connectionFactory = new ConnectionFactory
+        //    {
+        //        HostName = this.HostName,
+        //        UserName = this.UserName,
+        //        Password = this.Password,
+        //        Port = this.Port,
+        //        VirtualHost = this.VirtualHost,
+        //        AutomaticRecoveryEnabled = true
+        //    };
+        //    return connectionFactory;
+        //}
     }
 }
