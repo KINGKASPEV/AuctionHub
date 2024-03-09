@@ -1,17 +1,16 @@
 ﻿using AuctionHub.Application.DTOs.Bids;
 using AuctionHub.Application.Interfaces.Services;
-using AuctionHub.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuctionHub.Controllers
 {
     [ApiController]
     [Route("api/bidding")]
-    public class BiddingController : ControllerBase
+    public class BidController : ControllerBase
     {
         private readonly IBiddingService _biddingService;
 
-        public BiddingController(IBiddingService biddingService)
+        public BidController(IBiddingService biddingService)
         {
             _biddingService = biddingService;
         }

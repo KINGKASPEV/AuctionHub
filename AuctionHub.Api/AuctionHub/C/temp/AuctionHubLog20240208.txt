@@ -1,0 +1,305 @@
+2024-02-08 03:18:30.844 +00:00 [INF] Now listening on: https://[::]:443
+2024-02-08 03:18:30.944 +00:00 [INF] Now listening on: http://[::]:80
+2024-02-08 03:18:30.968 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-08 03:18:30.988 +00:00 [INF] Hosting environment: Development
+2024-02-08 03:18:30.991 +00:00 [INF] Content root path: /app
+2024-02-08 03:18:34.956 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32772/swagger - -
+2024-02-08 03:18:35.144 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32772/swagger - - - 301 0 - 191.4417ms
+2024-02-08 03:18:35.189 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32772/swagger/index.html - -
+2024-02-08 03:18:35.508 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32772/swagger/index.html - - - 200 - text/html;charset=utf-8 318.7117ms
+2024-02-08 03:18:35.567 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32772/swagger/swagger-ui.css - -
+2024-02-08 03:18:35.601 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32772/swagger/swagger-ui-bundle.js - -
+2024-02-08 03:18:35.603 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32772/swagger/swagger-ui-standalone-preset.js - -
+2024-02-08 03:18:35.795 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-02-08 03:18:35.798 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32772/swagger/swagger-ui.css - - - 200 144929 text/css 230.7328ms
+2024-02-08 03:18:35.860 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-02-08 03:18:35.875 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32772/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 272.8184ms
+2024-02-08 03:18:36.670 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-02-08 03:18:36.673 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32772/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 1072.9701ms
+2024-02-08 03:18:37.560 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32772/swagger/favicon-32x32.png - -
+2024-02-08 03:18:37.564 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-02-08 03:18:37.567 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32772/swagger/favicon-32x32.png - - - 200 628 image/png 7.9088ms
+2024-02-08 03:18:38.081 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32772/swagger/v1/swagger.json - -
+2024-02-08 03:18:38.682 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32772/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 602.6611ms
+2024-02-08 03:39:37.123 +00:00 [INF] Now listening on: https://[::]:443
+2024-02-08 03:39:37.202 +00:00 [INF] Now listening on: http://[::]:80
+2024-02-08 03:39:37.219 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-08 03:39:37.225 +00:00 [INF] Hosting environment: Development
+2024-02-08 03:39:37.230 +00:00 [INF] Content root path: /app
+2024-02-08 03:39:39.716 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32776/swagger - -
+2024-02-08 03:39:39.865 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32776/swagger - - - 301 0 - 154.8503ms
+2024-02-08 03:39:39.889 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32776/swagger/index.html - -
+2024-02-08 03:39:40.118 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32776/swagger/index.html - - - 200 - text/html;charset=utf-8 229.5890ms
+2024-02-08 03:39:40.177 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32776/swagger/swagger-ui.css - -
+2024-02-08 03:39:40.199 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32776/swagger/swagger-ui-bundle.js - -
+2024-02-08 03:39:40.199 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32776/swagger/swagger-ui-standalone-preset.js - -
+2024-02-08 03:39:40.454 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-02-08 03:39:40.481 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-02-08 03:39:40.484 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32776/swagger/swagger-ui.css - - - 200 144929 text/css 306.8143ms
+2024-02-08 03:39:40.487 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32776/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 288.4793ms
+2024-02-08 03:39:41.014 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-02-08 03:39:41.025 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32776/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 826.7054ms
+2024-02-08 03:39:42.275 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32776/swagger/favicon-32x32.png - -
+2024-02-08 03:39:42.277 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-02-08 03:39:42.281 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32776/swagger/favicon-32x32.png - - - 200 628 image/png 8.7781ms
+2024-02-08 03:39:42.771 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32776/swagger/v1/swagger.json - -
+2024-02-08 03:39:43.312 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32776/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 541.2195ms
+2024-02-08 03:40:29.169 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32776/api/bidding-room/start-auction application/json 184
+2024-02-08 03:40:29.205 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-02-08 03:40:29.267 +00:00 [INF] Route matched with {action = "StartAuction", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartAuctionAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-02-08 03:40:29.935 +00:00 [INF] Connecting to RabbitMQ with HostName: http://localhost:15672/, Port: 15672
+2024-02-08 03:40:30.183 +00:00 [ERR] Error establishing RabbitMQ connection.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (00000005, 0xFFFDFFFF): Name or service not known
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Int64 startingTimestamp)
+   at System.Net.Dns.<>c.<GetHostEntryOrAddressesCoreAsync>b__33_0(Object s, Int64 startingTimestamp)
+   at System.Net.Dns.<>c__DisplayClass39_0`1.<RunAsync>b__0(Task <p0>, Object <p1>)
+   at System.Threading.Tasks.ContinuationResultTaskFromTask`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at AuctionHub.Application.ServiceImplementations.BiddingRoomService..ctor(IUnitOfWork unitOfWork, ILogger`1 logger, RabbitMQConfig rabbitMQConfig) in C:\Users\user\Desktop\My-project\AuctionHub\AuctionHub.Api\AuctionHub.Application\ServiceImplementations\BiddingRoomService.cs:line 49
+2024-02-08 03:43:53.117 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub) in 203783.3469ms
+2024-02-08 03:43:53.134 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-02-08 03:43:53.191 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (00000005, 0xFFFDFFFF): Name or service not known
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Int64 startingTimestamp)
+   at System.Net.Dns.<>c.<GetHostEntryOrAddressesCoreAsync>b__33_0(Object s, Int64 startingTimestamp)
+   at System.Net.Dns.<>c__DisplayClass39_0`1.<RunAsync>b__0(Task <p0>, Object <p1>)
+   at System.Threading.Tasks.ContinuationResultTaskFromTask`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at AuctionHub.Application.ServiceImplementations.BiddingRoomService..ctor(IUnitOfWork unitOfWork, ILogger`1 logger, RabbitMQConfig rabbitMQConfig) in C:\Users\user\Desktop\My-project\AuctionHub\AuctionHub.Api\AuctionHub.Application\ServiceImplementations\BiddingRoomService.cs:line 49
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.ConstructorInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-02-08 03:43:53.380 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32776/api/bidding-room/start-auction application/json 184 - 500 - text/plain;+charset=utf-8 204253.0093ms
+2024-02-08 03:44:11.225 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32776/api/bidding-room/start-auction application/json 184
+2024-02-08 03:44:11.235 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-02-08 03:44:11.240 +00:00 [INF] Route matched with {action = "StartAuction", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartAuctionAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-02-08 03:44:11.285 +00:00 [INF] Connecting to RabbitMQ with HostName: http://localhost:15672/, Port: 15672
+2024-02-08 03:44:11.397 +00:00 [ERR] Error establishing RabbitMQ connection.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (00000005, 0xFFFDFFFF): Name or service not known
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Int64 startingTimestamp)
+   at System.Net.Dns.<>c.<GetHostEntryOrAddressesCoreAsync>b__33_0(Object s, Int64 startingTimestamp)
+   at System.Net.Dns.<>c__DisplayClass39_0`1.<RunAsync>b__0(Task <p0>, Object <p1>)
+   at System.Threading.Tasks.ContinuationResultTaskFromTask`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at AuctionHub.Application.ServiceImplementations.BiddingRoomService..ctor(IUnitOfWork unitOfWork, ILogger`1 logger, RabbitMQConfig rabbitMQConfig) in C:\Users\user\Desktop\My-project\AuctionHub\AuctionHub.Api\AuctionHub.Application\ServiceImplementations\BiddingRoomService.cs:line 49
+2024-02-08 03:44:17.001 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub) in 5751.8224ms
+2024-02-08 03:44:17.029 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-02-08 03:44:17.040 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (00000005, 0xFFFDFFFF): Name or service not known
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Int64 startingTimestamp)
+   at System.Net.Dns.<>c.<GetHostEntryOrAddressesCoreAsync>b__33_0(Object s, Int64 startingTimestamp)
+   at System.Net.Dns.<>c__DisplayClass39_0`1.<RunAsync>b__0(Task <p0>, Object <p1>)
+   at System.Threading.Tasks.ContinuationResultTaskFromTask`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at AuctionHub.Application.ServiceImplementations.BiddingRoomService..ctor(IUnitOfWork unitOfWork, ILogger`1 logger, RabbitMQConfig rabbitMQConfig) in C:\Users\user\Desktop\My-project\AuctionHub\AuctionHub.Api\AuctionHub.Application\ServiceImplementations\BiddingRoomService.cs:line 49
+   at InvokeStub_BiddingRoomService..ctor(Object, Object, IntPtr*)
+   at System.Reflection.ConstructorInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-02-08 03:44:17.086 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32776/api/bidding-room/start-auction application/json 184 - 500 - text/plain;+charset=utf-8 5862.4907ms
+2024-02-08 03:51:55.079 +00:00 [INF] Now listening on: https://[::]:443
+2024-02-08 03:51:55.169 +00:00 [INF] Now listening on: http://[::]:80
+2024-02-08 03:51:55.181 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-08 03:51:55.187 +00:00 [INF] Hosting environment: Development
+2024-02-08 03:51:55.194 +00:00 [INF] Content root path: /app
+2024-02-08 03:51:58.367 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32780/swagger - -
+2024-02-08 03:51:58.501 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32780/swagger - - - 301 0 - 139.0289ms
+2024-02-08 03:51:58.545 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32780/swagger/index.html - -
+2024-02-08 03:51:58.855 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32780/swagger/index.html - - - 200 - text/html;charset=utf-8 311.0284ms
+2024-02-08 03:51:59.042 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32780/swagger/swagger-ui.css - -
+2024-02-08 03:51:59.067 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32780/swagger/swagger-ui-standalone-preset.js - -
+2024-02-08 03:51:59.044 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32780/swagger/swagger-ui-bundle.js - -
+2024-02-08 03:52:00.379 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-02-08 03:52:00.379 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-02-08 03:52:00.396 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32780/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 1328.4945ms
+2024-02-08 03:52:00.402 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32780/swagger/swagger-ui.css - - - 200 144929 text/css 1359.9892ms
+2024-02-08 03:52:00.913 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-02-08 03:52:00.934 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32780/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 1889.6794ms
+2024-02-08 03:52:01.419 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32780/swagger/favicon-32x32.png - -
+2024-02-08 03:52:01.421 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-02-08 03:52:01.423 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32780/swagger/favicon-32x32.png - - - 200 628 image/png 4.8065ms
+2024-02-08 03:52:01.943 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32780/swagger/v1/swagger.json - -
+2024-02-08 03:52:02.413 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32780/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 470.1555ms
+2024-02-08 03:53:02.292 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32780/api/bidding-room/start-auction application/json 184
+2024-02-08 03:53:02.367 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-02-08 03:53:02.410 +00:00 [INF] Route matched with {action = "StartAuction", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartAuctionAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-02-08 03:53:02.869 +00:00 [INF] Connecting to RabbitMQ with HostName: http://localhost:15672/, Port: 15672
+2024-02-08 03:53:03.005 +00:00 [ERR] Error establishing RabbitMQ connection.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (00000005, 0xFFFDFFFF): Name or service not known
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Int64 startingTimestamp)
+   at System.Net.Dns.<>c.<GetHostEntryOrAddressesCoreAsync>b__33_0(Object s, Int64 startingTimestamp)
+   at System.Net.Dns.<>c__DisplayClass39_0`1.<RunAsync>b__0(Task <p0>, Object <p1>)
+   at System.Threading.Tasks.ContinuationResultTaskFromTask`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at AuctionHub.Application.ServiceImplementations.BiddingRoomService..ctor(IUnitOfWork unitOfWork, ILogger`1 logger, RabbitMQConfig rabbitMQConfig) in C:\Users\user\Desktop\My-project\AuctionHub\AuctionHub.Api\AuctionHub.Application\ServiceImplementations\BiddingRoomService.cs:line 49

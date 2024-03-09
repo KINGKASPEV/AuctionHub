@@ -1,0 +1,103 @@
+2024-03-05 12:43:48.906 +00:00 [INF] Now listening on: https://[::]:443
+2024-03-05 12:43:48.994 +00:00 [INF] Now listening on: http://[::]:80
+2024-03-05 12:43:49.012 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-05 12:43:49.019 +00:00 [INF] Hosting environment: Development
+2024-03-05 12:43:49.028 +00:00 [INF] Content root path: /app
+2024-03-05 12:43:54.865 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger/index.html - -
+2024-03-05 12:43:55.197 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger/index.html - - - 200 - text/html;charset=utf-8 335.9025ms
+2024-03-05 12:43:57.145 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger/v1/swagger.json - -
+2024-03-05 12:43:57.406 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 260.5552ms
+2024-03-05 12:44:26.940 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/api/bidding/get-all-bids - -
+2024-03-05 12:44:26.974 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.GetAllBidsAsync (AuctionHub)'
+2024-03-05 12:44:27.002 +00:00 [INF] Route matched with {action = "GetAllBids", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBidsAsync() on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-05 12:44:29.228 +00:00 [INF] Executed DbCommand (83ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."Amount", "b"."BidTime", "b"."BiddingRoomId", "b"."CreatedAt", "b"."CreatedBy", "b"."UpdatedAt", "b"."UpdatedBy"
+FROM "Bids" AS "b"
+2024-03-05 12:44:29.429 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[AuctionHub.Application.DTOs.Bids.BidResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-05 12:44:29.492 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingController.GetAllBidsAsync (AuctionHub) in 2471.4624ms
+2024-03-05 12:44:29.495 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingController.GetAllBidsAsync (AuctionHub)'
+2024-03-05 12:44:29.520 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/api/bidding/get-all-bids - - - 200 - application/json;+charset=utf-8 2581.1650ms
+2024-03-05 12:45:29.799 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32770/api/bidding-room/start-auction application/json 220
+2024-03-05 12:45:29.823 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-05 12:45:29.882 +00:00 [INF] Route matched with {action = "StartAuction", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartAuctionAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-05 12:45:30.483 +00:00 [INF] Executed DbCommand (33ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Boolean), @p5='?' (Size = 31), @p6='?' (Size = 14), @p7='?' (DbType = DateTime), @p8='?', @p9='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "BiddingRooms" ("Id", "CreatedAt", "CreatedBy", "EndTime", "IsAuctionActive", "ItemName", "RoomName", "UpdatedAt", "UpdatedBy", "WinningBidId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-03-05 12:45:30.511 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-05 12:45:30.516 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub) in 632.54ms
+2024-03-05 12:45:30.519 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-05 12:45:30.601 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32770/api/bidding-room/start-auction application/json 220 - 200 - application/json;+charset=utf-8 806.9178ms
+2024-03-05 12:45:51.774 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/api/bidding-room/get-all-bidding-rooms - -
+2024-03-05 12:45:51.786 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.GetAllBiddingRoomsAsync (AuctionHub)'
+2024-03-05 12:45:51.794 +00:00 [INF] Route matched with {action = "GetAllBiddingRooms", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBiddingRoomsAsync() on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-05 12:45:51.954 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId"
+FROM "BiddingRooms" AS "b"
+2024-03-05 12:45:51.968 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[System.Collections.Generic.List`1[[AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-05 12:45:51.984 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.GetAllBiddingRoomsAsync (AuctionHub) in 189.1209ms
+2024-03-05 12:45:51.987 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.GetAllBiddingRoomsAsync (AuctionHub)'
+2024-03-05 12:45:51.991 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/api/bidding-room/get-all-bidding-rooms - - - 200 - application/json;+charset=utf-8 217.2624ms
+2024-03-05 12:46:40.065 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32770/api/bidding/submit-bid?biddingRoomId=57431c8f-1a80-4168-bc89-a9ecc0f9a4fc application/json 50
+2024-03-05 12:46:40.070 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-05 12:46:40.087 +00:00 [INF] Route matched with {action = "SubmitBid", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitBidAsync(System.String, AuctionHub.Application.DTOs.Bids.BidRequestDto) on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-05 12:46:41.972 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__roomId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId", "b0"."Id", "b0"."Amount", "b0"."BidTime", "b0"."BiddingRoomId", "b0"."CreatedAt", "b0"."CreatedBy", "b0"."UpdatedAt", "b0"."UpdatedBy"
+FROM "BiddingRooms" AS "b"
+LEFT JOIN "Bids" AS "b0" ON "b"."WinningBidId" = "b0"."Id"
+WHERE "b"."Id" = @__roomId_0
+LIMIT 1
+2024-03-05 12:46:41.990 +00:00 [INF] Current UTC Time: 2024-03-05 12:46:41
+2024-03-05 12:46:41.998 +00:00 [INF] BiddingRoom EndTime: 2024-03-05 13:45:30
+2024-03-05 12:46:42.141 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (Size = 36), @p4='?' (DbType = DateTime), @p5='?' (Size = 8), @p6='?' (DbType = DateTime), @p7='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Bids" ("Id", "Amount", "BidTime", "BiddingRoomId", "CreatedAt", "CreatedBy", "UpdatedAt", "UpdatedBy")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2024-03-05 12:46:42.183 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@p9='?' (Size = 36), @p0='?' (DbType = DateTime), @p1='?', @p2='?' (DbType = DateTime), @p3='?' (DbType = Boolean), @p4='?' (Size = 31), @p5='?' (Size = 14), @p6='?' (DbType = DateTime), @p7='?', @p8='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "BiddingRooms" SET "CreatedAt" = @p0, "CreatedBy" = @p1, "EndTime" = @p2, "IsAuctionActive" = @p3, "ItemName" = @p4, "RoomName" = @p5, "UpdatedAt" = @p6, "UpdatedBy" = @p7, "WinningBidId" = @p8
+WHERE "Id" = @p9
+RETURNING 1;
+2024-03-05 12:46:42.202 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.Bids.BidResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-05 12:46:42.214 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub) in 2125.7943ms
+2024-03-05 12:46:42.216 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-05 12:46:42.219 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32770/api/bidding/submit-bid?biddingRoomId=57431c8f-1a80-4168-bc89-a9ecc0f9a4fc application/json 50 - 200 - application/json;+charset=utf-8 2154.7368ms
+2024-03-05 12:49:16.117 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32770/api/invoice/generate-invoice/57431c8f-1a80-4168-bc89-a9ecc0f9a4fc application/json 189
+2024-03-05 12:49:16.143 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.InvoiceController.GenerateInvoiceAsync (AuctionHub)'
+2024-03-05 12:49:16.156 +00:00 [INF] Route matched with {action = "GenerateInvoice", controller = "Invoice"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateInvoiceAsync(System.String, AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.InvoiceController (AuctionHub).
+2024-03-05 12:49:16.193 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__roomId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId", "b0"."Id", "b0"."Amount", "b0"."BidTime", "b0"."BiddingRoomId", "b0"."CreatedAt", "b0"."CreatedBy", "b0"."UpdatedAt", "b0"."UpdatedBy"
+FROM "BiddingRooms" AS "b"
+LEFT JOIN "Bids" AS "b0" ON "b"."WinningBidId" = "b0"."Id"
+WHERE "b"."Id" = @__roomId_0
+LIMIT 1
+2024-03-05 12:49:16.198 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-03-05 12:49:16.200 +00:00 [INF] Executed action AuctionHub.Controllers.InvoiceController.GenerateInvoiceAsync (AuctionHub) in 41.0177ms
+2024-03-05 12:49:16.202 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.InvoiceController.GenerateInvoiceAsync (AuctionHub)'
+2024-03-05 12:49:16.209 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32770/api/invoice/generate-invoice/57431c8f-1a80-4168-bc89-a9ecc0f9a4fc application/json 189 - 400 - text/plain;+charset=utf-8 114.3417ms
+2024-03-05 12:49:41.896 +00:00 [INF] Request starting HTTP/2 DELETE https://localhost:32770/api/bidding-room/delete-bidding-room/57431c8f-1a80-4168-bc89-a9ecc0f9a4fc - -
+2024-03-05 12:49:41.921 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.DeleteBiddingRoomByIdAsync (AuctionHub)'
+2024-03-05 12:49:41.930 +00:00 [INF] Route matched with {action = "DeleteBiddingRoomById", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteBiddingRoomByIdAsync(System.String) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-05 12:49:41.988 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId"
+FROM "BiddingRooms" AS "b"
+WHERE "b"."Id" = @__p_0
+LIMIT 1
+2024-03-05 12:49:42.023 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "BiddingRooms"
+WHERE "Id" = @p0
+RETURNING 1;
+2024-03-05 12:49:42.052 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-05 12:49:42.059 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.DeleteBiddingRoomByIdAsync (AuctionHub) in 127.37ms
+2024-03-05 12:49:42.062 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.DeleteBiddingRoomByIdAsync (AuctionHub)'
+2024-03-05 12:49:42.065 +00:00 [INF] Request finished HTTP/2 DELETE https://localhost:32770/api/bidding-room/delete-bidding-room/57431c8f-1a80-4168-bc89-a9ecc0f9a4fc - - - 200 - application/json;+charset=utf-8 189.9775ms
+2024-03-05 12:49:51.730 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32770/api/invoice/generate-invoice/57431c8f-1a80-4168-bc89-a9ecc0f9a4fc application/json 189
+2024-03-05 12:49:51.737 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.InvoiceController.GenerateInvoiceAsync (AuctionHub)'
+2024-03-05 12:49:51.743 +00:00 [INF] Route matched with {action = "GenerateInvoice", controller = "Invoice"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateInvoiceAsync(System.String, AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.InvoiceController (AuctionHub).
+2024-03-05 12:49:51.763 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__roomId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId", "b0"."Id", "b0"."Amount", "b0"."BidTime", "b0"."BiddingRoomId", "b0"."CreatedAt", "b0"."CreatedBy", "b0"."UpdatedAt", "b0"."UpdatedBy"
+FROM "BiddingRooms" AS "b"
+LEFT JOIN "Bids" AS "b0" ON "b"."WinningBidId" = "b0"."Id"
+WHERE "b"."Id" = @__roomId_0
+LIMIT 1
+2024-03-05 12:49:51.766 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-03-05 12:49:51.769 +00:00 [INF] Executed action AuctionHub.Controllers.InvoiceController.GenerateInvoiceAsync (AuctionHub) in 24.5765ms
+2024-03-05 12:49:51.774 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.InvoiceController.GenerateInvoiceAsync (AuctionHub)'
+2024-03-05 12:49:51.777 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32770/api/invoice/generate-invoice/57431c8f-1a80-4168-bc89-a9ecc0f9a4fc application/json 189 - 400 - text/plain;+charset=utf-8 67.5881ms

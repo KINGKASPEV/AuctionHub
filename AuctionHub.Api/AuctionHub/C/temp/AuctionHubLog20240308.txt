@@ -1,0 +1,372 @@
+2024-03-08 07:15:20.715 +00:00 [INF] Now listening on: https://[::]:443
+2024-03-08 07:15:20.807 +00:00 [INF] Now listening on: http://[::]:80
+2024-03-08 07:15:20.820 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-08 07:15:20.825 +00:00 [INF] Hosting environment: Development
+2024-03-08 07:15:20.830 +00:00 [INF] Content root path: /app
+2024-03-08 07:15:24.826 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32774/swagger - -
+2024-03-08 07:15:25.017 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32774/swagger - - - 301 0 - 195.4201ms
+2024-03-08 07:15:25.099 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32774/swagger/index.html - -
+2024-03-08 07:15:25.500 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32774/swagger/index.html - - - 200 - text/html;charset=utf-8 400.8195ms
+2024-03-08 07:15:25.619 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32774/swagger/swagger-ui.css - -
+2024-03-08 07:15:25.621 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32774/swagger/swagger-ui-standalone-preset.js - -
+2024-03-08 07:15:25.621 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32774/swagger/swagger-ui-bundle.js - -
+2024-03-08 07:15:26.081 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-03-08 07:15:26.085 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32774/swagger/swagger-ui.css - - - 200 144929 text/css 466.1812ms
+2024-03-08 07:15:26.552 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-03-08 07:15:26.572 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32774/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 950.6174ms
+2024-03-08 07:15:26.813 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-03-08 07:15:26.819 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32774/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 1198.0728ms
+2024-03-08 07:15:27.487 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32774/swagger/favicon-32x32.png - -
+2024-03-08 07:15:27.489 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-03-08 07:15:27.495 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32774/swagger/favicon-32x32.png - - - 200 628 image/png 9.6378ms
+2024-03-08 07:15:28.170 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32774/swagger/v1/swagger.json - -
+2024-03-08 07:15:28.581 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32774/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 410.9548ms
+2024-03-08 07:20:06.507 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32774/api/bidding-room/create-bidding-room application/json 79
+2024-03-08 07:20:06.533 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.CreateBiddingRoomAsync (AuctionHub)'
+2024-03-08 07:20:06.599 +00:00 [INF] Route matched with {action = "CreateBiddingRoom", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBiddingRoomAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-08 07:20:10.039 +00:00 [INF] Executed DbCommand (151ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Boolean), @p5='?' (Size = 3), @p6='?' (Size = 11), @p7='?' (DbType = DateTime), @p8='?', @p9='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "BiddingRooms" ("Id", "CreatedAt", "CreatedBy", "EndTime", "IsAuctionActive", "ItemName", "RoomName", "UpdatedAt", "UpdatedBy", "WinningBidId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-03-08 07:20:10.090 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-08 07:20:10.137 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.CreateBiddingRoomAsync (AuctionHub) in 3524.798ms
+2024-03-08 07:20:10.139 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.CreateBiddingRoomAsync (AuctionHub)'
+2024-03-08 07:20:10.214 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32774/api/bidding-room/create-bidding-room application/json 79 - 200 - application/json;+charset=utf-8 3731.3314ms
+2024-03-08 07:21:00.860 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32774/api/bidding/submit-bid?biddingRoomId=1bc69ba2-ab79-4bf7-abd2-4d3670957744 application/json 46
+2024-03-08 07:21:00.903 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 07:21:00.921 +00:00 [INF] Route matched with {action = "SubmitBid", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitBidAsync(System.String, AuctionHub.Application.DTOs.Bids.BidRequestDto) on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-08 07:21:01.011 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-03-08 07:21:01.040 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub) in 117.5658ms
+2024-03-08 07:21:01.045 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 07:21:01.048 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32774/api/bidding/submit-bid?biddingRoomId=1bc69ba2-ab79-4bf7-abd2-4d3670957744 application/json 46 - 400 - application/problem+json;+charset=utf-8 188.2811ms
+2024-03-08 07:21:10.357 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32774/api/bidding/submit-bid?biddingRoomId=1bc69ba2-ab79-4bf7-abd2-4d3670957744 application/json 45
+2024-03-08 07:21:10.361 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 07:21:10.364 +00:00 [INF] Route matched with {action = "SubmitBid", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitBidAsync(System.String, AuctionHub.Application.DTOs.Bids.BidRequestDto) on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-08 07:21:11.252 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[@__roomId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId", "b0"."Id", "b0"."Amount", "b0"."BidTime", "b0"."BiddingRoomId", "b0"."CreatedAt", "b0"."CreatedBy", "b0"."UpdatedAt", "b0"."UpdatedBy"
+FROM "BiddingRooms" AS "b"
+LEFT JOIN "Bids" AS "b0" ON "b"."WinningBidId" = "b0"."Id"
+WHERE "b"."Id" = @__roomId_0
+LIMIT 1
+2024-03-08 07:21:11.317 +00:00 [INF] Current UTC Time: 2024-03-08 07:21:11
+2024-03-08 07:21:11.322 +00:00 [INF] BiddingRoom EndTime: 
+2024-03-08 07:21:11.326 +00:00 [INF] Auction is not active or has ended. IsAuctionActive: True, EndTime: , CurrentTime: 2024-03-08 07:21:11
+2024-03-08 07:21:11.329 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.Bids.BidResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-08 07:21:11.336 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub) in 968.133ms
+2024-03-08 07:21:11.337 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 07:21:11.340 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32774/api/bidding/submit-bid?biddingRoomId=1bc69ba2-ab79-4bf7-abd2-4d3670957744 application/json 45 - 400 - application/json;+charset=utf-8 984.0498ms
+2024-03-08 07:21:52.559 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32774/api/bidding-room/create-bidding-room application/json 87
+2024-03-08 07:21:52.570 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.CreateBiddingRoomAsync (AuctionHub)'
+2024-03-08 07:21:52.573 +00:00 [INF] Route matched with {action = "CreateBiddingRoom", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBiddingRoomAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-08 07:21:52.645 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Boolean), @p5='?' (Size = 6), @p6='?' (Size = 15), @p7='?' (DbType = DateTime), @p8='?', @p9='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "BiddingRooms" ("Id", "CreatedAt", "CreatedBy", "EndTime", "IsAuctionActive", "ItemName", "RoomName", "UpdatedAt", "UpdatedBy", "WinningBidId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-03-08 07:21:52.650 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-08 07:21:52.652 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.CreateBiddingRoomAsync (AuctionHub) in 73.1519ms
+2024-03-08 07:21:52.656 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.CreateBiddingRoomAsync (AuctionHub)'
+2024-03-08 07:21:52.660 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32774/api/bidding-room/create-bidding-room application/json 87 - 200 - application/json;+charset=utf-8 100.5801ms
+2024-03-08 07:22:29.024 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32774/api/bidding/submit-bid?biddingRoomId=4376e5a0-40ea-4057-b87a-28dbcfe63bb0 application/json 45
+2024-03-08 07:22:29.029 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 07:22:29.034 +00:00 [INF] Route matched with {action = "SubmitBid", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitBidAsync(System.String, AuctionHub.Application.DTOs.Bids.BidRequestDto) on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-08 07:22:29.067 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__roomId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId", "b0"."Id", "b0"."Amount", "b0"."BidTime", "b0"."BiddingRoomId", "b0"."CreatedAt", "b0"."CreatedBy", "b0"."UpdatedAt", "b0"."UpdatedBy"
+FROM "BiddingRooms" AS "b"
+LEFT JOIN "Bids" AS "b0" ON "b"."WinningBidId" = "b0"."Id"
+WHERE "b"."Id" = @__roomId_0
+LIMIT 1
+2024-03-08 07:22:29.076 +00:00 [INF] Current UTC Time: 2024-03-08 07:22:29
+2024-03-08 07:22:29.081 +00:00 [INF] BiddingRoom EndTime: 
+2024-03-08 07:22:29.090 +00:00 [INF] Auction is not active or has ended. IsAuctionActive: False, EndTime: , CurrentTime: 2024-03-08 07:22:29
+2024-03-08 07:22:29.093 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.Bids.BidResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-08 07:22:29.100 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub) in 63.1723ms
+2024-03-08 07:22:29.103 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 07:22:29.105 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32774/api/bidding/submit-bid?biddingRoomId=4376e5a0-40ea-4057-b87a-28dbcfe63bb0 application/json 45 - 400 - application/json;+charset=utf-8 109.3451ms
+2024-03-08 07:22:42.123 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32774/api/bidding/get-all-bids - -
+2024-03-08 07:22:42.128 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.GetAllBidsAsync (AuctionHub)'
+2024-03-08 07:22:42.144 +00:00 [INF] Route matched with {action = "GetAllBids", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBidsAsync() on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-08 07:22:42.182 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."Amount", "b"."BidTime", "b"."BiddingRoomId", "b"."CreatedAt", "b"."CreatedBy", "b"."UpdatedAt", "b"."UpdatedBy"
+FROM "Bids" AS "b"
+2024-03-08 07:22:42.222 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[AuctionHub.Application.DTOs.Bids.BidResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-08 07:22:42.247 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingController.GetAllBidsAsync (AuctionHub) in 100.5933ms
+2024-03-08 07:22:42.249 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingController.GetAllBidsAsync (AuctionHub)'
+2024-03-08 07:22:42.252 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32774/api/bidding/get-all-bids - - - 200 - application/json;+charset=utf-8 129.3126ms
+2024-03-08 07:24:56.385 +00:00 [INF] Now listening on: https://[::]:443
+2024-03-08 07:24:56.552 +00:00 [INF] Now listening on: http://[::]:80
+2024-03-08 07:24:56.572 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-08 07:24:56.578 +00:00 [INF] Hosting environment: Development
+2024-03-08 07:24:56.586 +00:00 [INF] Content root path: /app
+2024-03-08 07:25:02.216 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32778/swagger - -
+2024-03-08 07:25:02.455 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32778/swagger - - - 301 0 - 244.5309ms
+2024-03-08 07:25:02.581 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32778/swagger/index.html - -
+2024-03-08 07:25:02.865 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32778/swagger/index.html - - - 200 - text/html;charset=utf-8 283.3354ms
+2024-03-08 07:25:03.038 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32778/swagger/swagger-ui.css - -
+2024-03-08 07:25:03.061 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32778/swagger/swagger-ui-bundle.js - -
+2024-03-08 07:25:03.061 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32778/swagger/swagger-ui-standalone-preset.js - -
+2024-03-08 07:25:03.371 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-03-08 07:25:03.373 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32778/swagger/swagger-ui.css - - - 200 144929 text/css 334.9366ms
+2024-03-08 07:25:03.386 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-03-08 07:25:03.389 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32778/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 327.6481ms
+2024-03-08 07:25:04.310 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-03-08 07:25:04.369 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32778/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 1307.5285ms
+2024-03-08 07:25:04.883 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32778/swagger/favicon-32x32.png - -
+2024-03-08 07:25:04.892 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-03-08 07:25:04.896 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32778/swagger/favicon-32x32.png - - - 200 628 image/png 13.6305ms
+2024-03-08 07:25:05.365 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32778/swagger/v1/swagger.json - -
+2024-03-08 07:25:06.005 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32778/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 640.7039ms
+2024-03-08 07:25:23.115 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32778/api/bidding/submit-bid?biddingRoomId=4376e5a0-40ea-4057-b87a-28dbcfe63bb0 application/json 41
+2024-03-08 07:25:23.148 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 07:25:23.209 +00:00 [INF] Route matched with {action = "SubmitBid", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitBidAsync(System.String, AuctionHub.Application.DTOs.Bids.BidRequestDto) on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-08 07:25:26.568 +00:00 [INF] Executed DbCommand (121ms) [Parameters=[@__roomId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId", "b0"."Id", "b0"."Amount", "b0"."BidTime", "b0"."BiddingRoomId", "b0"."CreatedAt", "b0"."CreatedBy", "b0"."UpdatedAt", "b0"."UpdatedBy"
+FROM "BiddingRooms" AS "b"
+LEFT JOIN "Bids" AS "b0" ON "b"."WinningBidId" = "b0"."Id"
+WHERE "b"."Id" = @__roomId_0
+LIMIT 1
+2024-03-08 07:25:26.770 +00:00 [INF] Auction is not active or has ended. IsAuctionActive: False, EndTime: , CurrentTime: 03/08/2024 07:25:26
+2024-03-08 07:25:26.783 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.Bids.BidResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-08 07:25:26.808 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub) in 3587.3815ms
+2024-03-08 07:25:26.811 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 07:25:26.831 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32778/api/bidding/submit-bid?biddingRoomId=4376e5a0-40ea-4057-b87a-28dbcfe63bb0 application/json 41 - 400 - application/json;+charset=utf-8 3716.0358ms
+2024-03-08 07:25:44.060 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32778/api/bidding/submit-bid?biddingRoomId=1bc69ba2-ab79-4bf7-abd2-4d3670957744 application/json 41
+2024-03-08 07:25:44.070 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 07:25:44.074 +00:00 [INF] Route matched with {action = "SubmitBid", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitBidAsync(System.String, AuctionHub.Application.DTOs.Bids.BidRequestDto) on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-08 07:25:44.157 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__roomId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId", "b0"."Id", "b0"."Amount", "b0"."BidTime", "b0"."BiddingRoomId", "b0"."CreatedAt", "b0"."CreatedBy", "b0"."UpdatedAt", "b0"."UpdatedBy"
+FROM "BiddingRooms" AS "b"
+LEFT JOIN "Bids" AS "b0" ON "b"."WinningBidId" = "b0"."Id"
+WHERE "b"."Id" = @__roomId_0
+LIMIT 1
+2024-03-08 07:25:44.179 +00:00 [INF] Auction is not active or has ended. IsAuctionActive: True, EndTime: , CurrentTime: 03/08/2024 07:25:44
+2024-03-08 07:25:44.184 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.Bids.BidResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-08 07:25:44.187 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub) in 109.3997ms
+2024-03-08 07:25:44.194 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 07:25:44.199 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32778/api/bidding/submit-bid?biddingRoomId=1bc69ba2-ab79-4bf7-abd2-4d3670957744 application/json 41 - 400 - application/json;+charset=utf-8 138.9803ms
+2024-03-08 08:00:24.806 +00:00 [INF] Now listening on: https://[::]:443
+2024-03-08 08:00:24.916 +00:00 [INF] Now listening on: http://[::]:80
+2024-03-08 08:00:24.932 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-08 08:00:24.938 +00:00 [INF] Hosting environment: Development
+2024-03-08 08:00:24.943 +00:00 [INF] Content root path: /app
+2024-03-08 08:00:28.571 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32782/swagger - -
+2024-03-08 08:00:28.721 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32782/swagger - - - 301 0 - 153.8001ms
+2024-03-08 08:00:28.775 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32782/swagger/index.html - -
+2024-03-08 08:00:29.080 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32782/swagger/index.html - - - 200 - text/html;charset=utf-8 304.9739ms
+2024-03-08 08:00:29.173 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32782/swagger/swagger-ui.css - -
+2024-03-08 08:00:29.177 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32782/swagger/swagger-ui-standalone-preset.js - -
+2024-03-08 08:00:29.177 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32782/swagger/swagger-ui-bundle.js - -
+2024-03-08 08:00:29.474 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-03-08 08:00:29.501 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-03-08 08:00:29.510 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32782/swagger/swagger-ui.css - - - 200 144929 text/css 336.9649ms
+2024-03-08 08:00:29.522 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32782/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 345.4560ms
+2024-03-08 08:00:29.714 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-03-08 08:00:29.716 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32782/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 539.9223ms
+2024-03-08 08:00:30.637 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32782/swagger/favicon-32x32.png - -
+2024-03-08 08:00:30.638 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-03-08 08:00:30.645 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32782/swagger/favicon-32x32.png - - - 200 628 image/png 8.6414ms
+2024-03-08 08:00:37.320 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32782/swagger/v1/swagger.json - -
+2024-03-08 08:00:37.667 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32782/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 347.8029ms
+2024-03-08 08:01:19.070 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32782/api/bidding/submit-bid?biddingRoomId=4376e5a0-40ea-4057-b87a-28dbcfe63bb0 application/json 45
+2024-03-08 08:01:19.092 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 08:01:19.175 +00:00 [INF] Route matched with {action = "SubmitBid", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitBidAsync(System.String, AuctionHub.Application.DTOs.Bids.BidRequestDto) on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-08 08:01:22.535 +00:00 [INF] Executed DbCommand (112ms) [Parameters=[@__roomId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId", "b0"."Id", "b0"."Amount", "b0"."BidTime", "b0"."BiddingRoomId", "b0"."CreatedAt", "b0"."CreatedBy", "b0"."UpdatedAt", "b0"."UpdatedBy"
+FROM "BiddingRooms" AS "b"
+LEFT JOIN "Bids" AS "b0" ON "b"."WinningBidId" = "b0"."Id"
+WHERE "b"."Id" = @__roomId_0
+LIMIT 1
+2024-03-08 08:01:22.760 +00:00 [INF] Current UTC Time: 2024-03-08 08:01:22
+2024-03-08 08:01:22.768 +00:00 [INF] BiddingRoom EndTime: 
+2024-03-08 08:01:22.776 +00:00 [INF] Auction is not active or has ended. IsAuctionActive: False, EndTime: , CurrentTime: 2024-03-08 08:01:22
+2024-03-08 08:01:22.789 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.Bids.BidResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-08 08:01:22.816 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub) in 3628.7264ms
+2024-03-08 08:01:22.822 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 08:01:22.839 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32782/api/bidding/submit-bid?biddingRoomId=4376e5a0-40ea-4057-b87a-28dbcfe63bb0 application/json 45 - 400 - application/json;+charset=utf-8 3815.1081ms
+2024-03-08 08:01:42.513 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32782/api/bidding/submit-bid?biddingRoomId=1bc69ba2-ab79-4bf7-abd2-4d3670957744 application/json 45
+2024-03-08 08:01:42.521 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 08:01:42.528 +00:00 [INF] Route matched with {action = "SubmitBid", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitBidAsync(System.String, AuctionHub.Application.DTOs.Bids.BidRequestDto) on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-08 08:01:42.636 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__roomId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId", "b0"."Id", "b0"."Amount", "b0"."BidTime", "b0"."BiddingRoomId", "b0"."CreatedAt", "b0"."CreatedBy", "b0"."UpdatedAt", "b0"."UpdatedBy"
+FROM "BiddingRooms" AS "b"
+LEFT JOIN "Bids" AS "b0" ON "b"."WinningBidId" = "b0"."Id"
+WHERE "b"."Id" = @__roomId_0
+LIMIT 1
+2024-03-08 08:01:42.649 +00:00 [INF] Current UTC Time: 2024-03-08 08:01:42
+2024-03-08 08:01:42.655 +00:00 [INF] BiddingRoom EndTime: 
+2024-03-08 08:01:42.668 +00:00 [INF] Auction is not active or has ended. IsAuctionActive: True, EndTime: , CurrentTime: 2024-03-08 08:01:42
+2024-03-08 08:01:42.670 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.Bids.BidResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-08 08:01:42.673 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub) in 132.3217ms
+2024-03-08 08:01:42.678 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 08:01:42.683 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32782/api/bidding/submit-bid?biddingRoomId=1bc69ba2-ab79-4bf7-abd2-4d3670957744 application/json 45 - 400 - application/json;+charset=utf-8 170.4408ms
+2024-03-08 08:02:56.947 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32782/api/bidding/submit-bid?biddingRoomId=1bc69ba2-ab79-4bf7-abd2-4d3670957744 application/json 45
+2024-03-08 08:02:56.951 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 08:02:56.954 +00:00 [INF] Route matched with {action = "SubmitBid", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitBidAsync(System.String, AuctionHub.Application.DTOs.Bids.BidRequestDto) on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-08 08:03:09.632 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__roomId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId", "b0"."Id", "b0"."Amount", "b0"."BidTime", "b0"."BiddingRoomId", "b0"."CreatedAt", "b0"."CreatedBy", "b0"."UpdatedAt", "b0"."UpdatedBy"
+FROM "BiddingRooms" AS "b"
+LEFT JOIN "Bids" AS "b0" ON "b"."WinningBidId" = "b0"."Id"
+WHERE "b"."Id" = @__roomId_0
+LIMIT 1
+2024-03-08 08:03:19.104 +00:00 [INF] Current UTC Time: 2024-03-08 08:03:17
+2024-03-08 08:03:21.211 +00:00 [INF] BiddingRoom EndTime: 
+2024-03-08 08:05:28.943 +00:00 [INF] Now listening on: https://[::]:443
+2024-03-08 08:05:29.034 +00:00 [INF] Now listening on: http://[::]:80
+2024-03-08 08:05:29.053 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-08 08:05:29.060 +00:00 [INF] Hosting environment: Development
+2024-03-08 08:05:29.065 +00:00 [INF] Content root path: /app
+2024-03-08 08:05:34.448 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32786/swagger - -
+2024-03-08 08:05:34.615 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32786/swagger - - - 301 0 - 174.8977ms
+2024-03-08 08:05:34.645 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32786/swagger/index.html - -
+2024-03-08 08:05:35.026 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32786/swagger/index.html - - - 200 - text/html;charset=utf-8 380.4662ms
+2024-03-08 08:05:35.091 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32786/swagger/swagger-ui.css - -
+2024-03-08 08:05:35.114 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32786/swagger/swagger-ui-bundle.js - -
+2024-03-08 08:05:35.116 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32786/swagger/swagger-ui-standalone-preset.js - -
+2024-03-08 08:05:35.323 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-03-08 08:05:35.329 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32786/swagger/swagger-ui.css - - - 200 144929 text/css 237.6547ms
+2024-03-08 08:05:35.385 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-03-08 08:05:35.439 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32786/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 322.9323ms
+2024-03-08 08:05:36.050 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-03-08 08:05:36.055 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32786/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 937.0199ms
+2024-03-08 08:05:36.985 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32786/swagger/favicon-32x32.png - -
+2024-03-08 08:05:36.989 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-03-08 08:05:36.996 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32786/swagger/favicon-32x32.png - - - 200 628 image/png 11.1989ms
+2024-03-08 08:05:43.536 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32786/swagger/v1/swagger.json - -
+2024-03-08 08:05:43.808 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32786/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 272.1119ms
+2024-03-08 08:06:06.805 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32786/api/bidding/submit-bid?biddingRoomId=4376e5a0-40ea-4057-b87a-28dbcfe63bb0 application/json 46
+2024-03-08 08:06:06.847 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 08:06:06.914 +00:00 [INF] Route matched with {action = "SubmitBid", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitBidAsync(System.String, AuctionHub.Application.DTOs.Bids.BidRequestDto) on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-08 08:06:10.364 +00:00 [INF] Executed DbCommand (131ms) [Parameters=[@__roomId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId", "b0"."Id", "b0"."Amount", "b0"."BidTime", "b0"."BiddingRoomId", "b0"."CreatedAt", "b0"."CreatedBy", "b0"."UpdatedAt", "b0"."UpdatedBy"
+FROM "BiddingRooms" AS "b"
+LEFT JOIN "Bids" AS "b0" ON "b"."WinningBidId" = "b0"."Id"
+WHERE "b"."Id" = @__roomId_0
+LIMIT 1
+2024-03-08 08:06:10.564 +00:00 [INF] Current UTC Time: 2024-03-08 08:06:10
+2024-03-08 08:06:10.573 +00:00 [INF] BiddingRoom EndTime: 
+2024-03-08 08:06:10.578 +00:00 [INF] Auction is not active or has ended. IsAuctionActive: False, EndTime: , CurrentTime: 2024-03-08 08:06:10
+2024-03-08 08:06:10.590 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.Bids.BidResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-08 08:06:10.613 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub) in 3684.6634ms
+2024-03-08 08:06:10.615 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 08:06:10.636 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32786/api/bidding/submit-bid?biddingRoomId=4376e5a0-40ea-4057-b87a-28dbcfe63bb0 application/json 46 - 400 - application/json;+charset=utf-8 3831.2128ms
+2024-03-08 08:06:27.920 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32786/api/bidding/submit-bid?biddingRoomId=1bc69ba2-ab79-4bf7-abd2-4d3670957744 application/json 46
+2024-03-08 08:06:27.950 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 08:06:27.955 +00:00 [INF] Route matched with {action = "SubmitBid", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitBidAsync(System.String, AuctionHub.Application.DTOs.Bids.BidRequestDto) on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-08 08:06:28.022 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__roomId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId", "b0"."Id", "b0"."Amount", "b0"."BidTime", "b0"."BiddingRoomId", "b0"."CreatedAt", "b0"."CreatedBy", "b0"."UpdatedAt", "b0"."UpdatedBy"
+FROM "BiddingRooms" AS "b"
+LEFT JOIN "Bids" AS "b0" ON "b"."WinningBidId" = "b0"."Id"
+WHERE "b"."Id" = @__roomId_0
+LIMIT 1
+2024-03-08 08:06:28.036 +00:00 [INF] Current UTC Time: 2024-03-08 08:06:28
+2024-03-08 08:06:28.040 +00:00 [INF] BiddingRoom EndTime: 
+2024-03-08 08:06:28.046 +00:00 [INF] Auction is not active or has ended. IsAuctionActive: True, EndTime: , CurrentTime: 2024-03-08 08:06:28
+2024-03-08 08:06:28.051 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.Bids.BidResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-08 08:06:28.057 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub) in 97.0755ms
+2024-03-08 08:06:28.063 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 08:06:28.068 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32786/api/bidding/submit-bid?biddingRoomId=1bc69ba2-ab79-4bf7-abd2-4d3670957744 application/json 46 - 400 - application/json;+charset=utf-8 147.4646ms
+2024-03-08 08:26:36.398 +00:00 [INF] Now listening on: https://[::]:443
+2024-03-08 08:26:36.494 +00:00 [INF] Now listening on: http://[::]:80
+2024-03-08 08:26:36.510 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-08 08:26:36.515 +00:00 [INF] Hosting environment: Development
+2024-03-08 08:26:36.519 +00:00 [INF] Content root path: /app
+2024-03-08 08:26:41.645 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32790/swagger - -
+2024-03-08 08:26:41.784 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32790/swagger - - - 301 0 - 145.5195ms
+2024-03-08 08:26:41.827 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32790/swagger/index.html - -
+2024-03-08 08:26:42.081 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32790/swagger/index.html - - - 200 - text/html;charset=utf-8 254.1933ms
+2024-03-08 08:26:42.186 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32790/swagger/swagger-ui.css - -
+2024-03-08 08:26:42.192 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32790/swagger/swagger-ui-standalone-preset.js - -
+2024-03-08 08:26:42.192 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32790/swagger/swagger-ui-bundle.js - -
+2024-03-08 08:26:42.438 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-03-08 08:26:42.441 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32790/swagger/swagger-ui.css - - - 200 144929 text/css 256.0929ms
+2024-03-08 08:26:42.489 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-03-08 08:26:42.491 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32790/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 299.1157ms
+2024-03-08 08:26:42.651 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-03-08 08:26:42.653 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32790/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 461.4291ms
+2024-03-08 08:26:43.627 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32790/swagger/favicon-32x32.png - -
+2024-03-08 08:26:43.630 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-03-08 08:26:43.633 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32790/swagger/favicon-32x32.png - - - 200 628 image/png 5.8075ms
+2024-03-08 08:26:50.126 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32790/swagger/v1/swagger.json - -
+2024-03-08 08:26:50.406 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32790/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 279.5729ms
+2024-03-08 08:27:44.384 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32790/api/bidding-room/create-bidding-room application/json 114
+2024-03-08 08:27:44.412 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.CreateBiddingRoomAsync (AuctionHub)'
+2024-03-08 08:27:44.491 +00:00 [INF] Route matched with {action = "CreateBiddingRoom", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBiddingRoomAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-08 08:27:47.554 +00:00 [INF] Executed DbCommand (116ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Boolean), @p5='?' (Size = 5), @p6='?' (Size = 3), @p7='?' (DbType = DateTime), @p8='?', @p9='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "BiddingRooms" ("Id", "CreatedAt", "CreatedBy", "EndTime", "IsAuctionActive", "ItemName", "RoomName", "UpdatedAt", "UpdatedBy", "WinningBidId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-03-08 08:27:47.608 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-08 08:27:47.639 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.CreateBiddingRoomAsync (AuctionHub) in 3134.8791ms
+2024-03-08 08:27:47.641 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.CreateBiddingRoomAsync (AuctionHub)'
+2024-03-08 08:27:47.709 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32790/api/bidding-room/create-bidding-room application/json 114 - 200 - application/json;+charset=utf-8 3325.9559ms
+2024-03-08 08:28:13.542 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32790/api/bidding-room/start-auction application/json 118
+2024-03-08 08:28:13.579 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-08 08:28:13.597 +00:00 [INF] Route matched with {action = "StartAuction", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartAuctionAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-08 08:28:13.619 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-08 08:28:13.626 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub) in 28.3168ms
+2024-03-08 08:28:13.628 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-08 08:28:13.631 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32790/api/bidding-room/start-auction application/json 118 - 400 - application/json;+charset=utf-8 110.2943ms
+2024-03-08 08:28:24.976 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32790/api/bidding-room/start-auction application/json 119
+2024-03-08 08:28:24.982 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-08 08:28:24.985 +00:00 [INF] Route matched with {action = "StartAuction", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartAuctionAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-08 08:28:25.351 +00:00 [INF] Executed DbCommand (19ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Boolean), @p5='?' (Size = 6), @p6='?' (Size = 6), @p7='?' (DbType = DateTime), @p8='?', @p9='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "BiddingRooms" ("Id", "CreatedAt", "CreatedBy", "EndTime", "IsAuctionActive", "ItemName", "RoomName", "UpdatedAt", "UpdatedBy", "WinningBidId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-03-08 08:28:25.391 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-08 08:28:25.392 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub) in 395.2461ms
+2024-03-08 08:28:25.401 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-08 08:28:25.405 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32790/api/bidding-room/start-auction application/json 119 - 200 - application/json;+charset=utf-8 428.8072ms
+2024-03-08 08:28:52.988 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32790/api/bidding/submit-bid?biddingRoomId=5d25fce7-fb4e-4216-8278-20a4ef338532 application/json 45
+2024-03-08 08:28:52.994 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 08:28:53.014 +00:00 [INF] Route matched with {action = "SubmitBid", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitBidAsync(System.String, AuctionHub.Application.DTOs.Bids.BidRequestDto) on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-08 08:28:53.995 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__roomId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId", "b0"."Id", "b0"."Amount", "b0"."BidTime", "b0"."BiddingRoomId", "b0"."CreatedAt", "b0"."CreatedBy", "b0"."UpdatedAt", "b0"."UpdatedBy"
+FROM "BiddingRooms" AS "b"
+LEFT JOIN "Bids" AS "b0" ON "b"."WinningBidId" = "b0"."Id"
+WHERE "b"."Id" = @__roomId_0
+LIMIT 1
+2024-03-08 08:28:54.048 +00:00 [INF] Current UTC Time: 2024-03-08 08:28:54
+2024-03-08 08:28:54.057 +00:00 [INF] BiddingRoom EndTime: 2024-03-08 08:27:21
+2024-03-08 08:28:54.062 +00:00 [INF] Auction is not active or has ended. IsAuctionActive: True, EndTime: 2024-03-08 08:27:21, CurrentTime: 2024-03-08 08:28:54
+2024-03-08 08:28:54.065 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.Bids.BidResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-08 08:28:54.074 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub) in 1051.2404ms
+2024-03-08 08:28:54.076 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingController.SubmitBidAsync (AuctionHub)'
+2024-03-08 08:28:54.082 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32790/api/bidding/submit-bid?biddingRoomId=5d25fce7-fb4e-4216-8278-20a4ef338532 application/json 45 - 400 - application/json;+charset=utf-8 1093.8999ms
+2024-03-08 19:36:51.873 +00:00 [INF] Now listening on: https://[::]:443
+2024-03-08 19:36:51.969 +00:00 [INF] Now listening on: http://[::]:80
+2024-03-08 19:36:51.985 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-08 19:36:51.991 +00:00 [INF] Hosting environment: Development
+2024-03-08 19:36:51.999 +00:00 [INF] Content root path: /app
+2024-03-08 19:36:55.424 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32794/swagger - -
+2024-03-08 19:36:55.582 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32794/swagger - - - 301 0 - 162.8426ms
+2024-03-08 19:36:55.647 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32794/swagger/index.html - -
+2024-03-08 19:36:55.958 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32794/swagger/index.html - - - 200 - text/html;charset=utf-8 310.8762ms
+2024-03-08 19:36:56.071 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32794/swagger/swagger-ui.css - -
+2024-03-08 19:36:56.093 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32794/swagger/swagger-ui-bundle.js - -
+2024-03-08 19:36:56.093 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32794/swagger/swagger-ui-standalone-preset.js - -
+2024-03-08 19:36:56.337 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-03-08 19:36:56.338 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32794/swagger/swagger-ui.css - - - 200 144929 text/css 266.4454ms
+2024-03-08 19:36:56.483 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-03-08 19:36:56.485 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32794/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 392.2637ms
+2024-03-08 19:36:56.726 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-03-08 19:36:56.732 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32794/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 639.0809ms
+2024-03-08 19:36:57.570 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32794/swagger/favicon-32x32.png - -
+2024-03-08 19:36:57.572 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-03-08 19:36:57.575 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32794/swagger/favicon-32x32.png - - - 200 628 image/png 5.3757ms
+2024-03-08 19:36:57.986 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32794/swagger/v1/swagger.json - -
+2024-03-08 19:36:58.323 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32794/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 336.7513ms
+2024-03-08 19:46:01.848 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32794/api/users/Create-user application/json 57
+2024-03-08 19:46:01.887 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.UserController.CreateUser (AuctionHub)'
+2024-03-08 19:46:01.965 +00:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(AuctionHub.Application.DTOs.AppUser.AppUserRequestDto) on controller AuctionHub.Controllers.UserController (AuctionHub).
+2024-03-08 19:46:04.433 +00:00 [INF] Executed DbCommand (67ms) [Parameters=[@__email_0='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UpdatedAt", "a"."UserName", "a"."VerifiedAt"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."Email" = @__email_0
+LIMIT 2
+2024-03-08 19:46:04.627 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.AppUser.AppUserResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-08 19:46:04.648 +00:00 [INF] Executed action AuctionHub.Controllers.UserController.CreateUser (AuctionHub) in 2671.5156ms
+2024-03-08 19:46:04.652 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.UserController.CreateUser (AuctionHub)'
+2024-03-08 19:46:04.666 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32794/api/users/Create-user application/json 57 - 400 - application/json;+charset=utf-8 2881.0038ms
+2024-03-08 19:46:39.236 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32794/api/bidding-room/start-auction application/json 118
+2024-03-08 19:46:39.285 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-08 19:46:39.303 +00:00 [INF] Route matched with {action = "StartAuction", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartAuctionAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-08 19:46:39.340 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-08 19:46:39.345 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub) in 41.1883ms
+2024-03-08 19:46:39.346 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-08 19:46:39.378 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32794/api/bidding-room/start-auction application/json 118 - 400 - application/json;+charset=utf-8 142.0997ms

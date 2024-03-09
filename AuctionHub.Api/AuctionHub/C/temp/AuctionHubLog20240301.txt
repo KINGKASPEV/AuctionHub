@@ -1,0 +1,213 @@
+2024-03-01 07:03:05.399 +00:00 [INF] Now listening on: https://[::]:443
+2024-03-01 07:03:05.496 +00:00 [INF] Now listening on: http://[::]:80
+2024-03-01 07:03:05.512 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-01 07:03:05.517 +00:00 [INF] Hosting environment: Development
+2024-03-01 07:03:05.523 +00:00 [INF] Content root path: /app
+2024-03-01 07:03:09.600 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger/index.html - -
+2024-03-01 07:03:10.319 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger/index.html - - - 200 - text/html;charset=utf-8 724.0687ms
+2024-03-01 07:03:13.210 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger/v1/swagger.json - -
+2024-03-01 07:03:13.583 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 373.1664ms
+2024-03-01 07:03:22.126 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32770/api/bidding-room/start-auction application/json 184
+2024-03-01 07:03:22.167 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-01 07:03:22.255 +00:00 [INF] Route matched with {action = "StartAuction", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartAuctionAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-01 07:03:23.046 +00:00 [INF] Connecting to RabbitMQ with HostName: localhost, Port: 15672
+2024-03-01 07:03:23.286 +00:00 [ERR] Error establishing RabbitMQ connection.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at AuctionHub.Application.ServiceImplementations.BiddingRoomService..ctor(IUnitOfWork unitOfWork, ILogger`1 logger, RabbitMQConfig rabbitMQConfig) in C:\Users\user\Desktop\My-project\AuctionHub\AuctionHub.Api\AuctionHub.Application\ServiceImplementations\BiddingRoomService.cs:line 49
+2024-03-01 07:23:03.801 +00:00 [INF] Now listening on: https://[::]:443
+2024-03-01 07:23:03.908 +00:00 [INF] Now listening on: http://[::]:80
+2024-03-01 07:23:03.924 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-01 07:23:03.931 +00:00 [INF] Hosting environment: Development
+2024-03-01 07:23:03.937 +00:00 [INF] Content root path: /app
+2024-03-01 07:23:07.528 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger/index.html - -
+2024-03-01 07:23:07.997 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger/index.html - - - 200 - text/html;charset=utf-8 476.4086ms
+2024-03-01 07:23:11.166 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger/v1/swagger.json - -
+2024-03-01 07:23:11.650 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 484.1054ms
+2024-03-01 07:23:23.123 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32770/api/bidding-room/start-auction application/json 184
+2024-03-01 07:23:23.169 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-01 07:23:23.237 +00:00 [INF] Route matched with {action = "StartAuction", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartAuctionAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-01 07:23:23.979 +00:00 [INF] Connecting to RabbitMQ with HostName: localhost, Port: 15672
+2024-03-01 07:23:24.202 +00:00 [ERR] Error establishing RabbitMQ connection.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at AuctionHub.Application.ServiceImplementations.BiddingRoomService..ctor(IUnitOfWork unitOfWork, ILogger`1 logger, RabbitMQConfig rabbitMQConfig) in C:\Users\user\Desktop\My-project\AuctionHub\AuctionHub.Api\AuctionHub.Application\ServiceImplementations\BiddingRoomService.cs:line 49
+2024-03-01 07:49:09.042 +00:00 [INF] Now listening on: https://[::]:443
+2024-03-01 07:49:09.197 +00:00 [INF] Now listening on: http://[::]:80
+2024-03-01 07:49:09.224 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-01 07:49:09.236 +00:00 [INF] Hosting environment: Development
+2024-03-01 07:49:09.247 +00:00 [INF] Content root path: /app
+2024-03-01 07:49:20.076 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger/index.html - -
+2024-03-01 07:49:21.210 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger/index.html - - - 200 - text/html;charset=utf-8 1158.9957ms
+2024-03-01 07:49:33.551 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger/v1/swagger.json - -
+2024-03-01 07:49:34.057 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 505.9920ms
+2024-03-01 07:49:43.594 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32770/api/bidding-room/start-auction application/json 184
+2024-03-01 07:49:43.635 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-01 07:49:43.763 +00:00 [INF] Route matched with {action = "StartAuction", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartAuctionAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-01 07:49:44.820 +00:00 [INF] Connecting to RabbitMQ with HostName: localhost, Port: 15672
+2024-03-01 07:49:45.087 +00:00 [ERR] Error establishing RabbitMQ connection.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at AuctionHub.Application.ServiceImplementations.BiddingRoomService..ctor(IUnitOfWork unitOfWork, ILogger`1 logger, RabbitMQConfig rabbitMQConfig) in C:\Users\user\Desktop\My-project\AuctionHub\AuctionHub.Api\AuctionHub.Application\ServiceImplementations\BiddingRoomService.cs:line 49
+2024-03-01 13:01:40.123 +00:00 [INF] Now listening on: https://[::]:443
+2024-03-01 13:01:40.423 +00:00 [INF] Now listening on: http://[::]:80
+2024-03-01 13:01:40.458 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-01 13:01:40.473 +00:00 [INF] Hosting environment: Development
+2024-03-01 13:01:40.486 +00:00 [INF] Content root path: /app
+2024-03-01 13:02:00.745 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger/index.html - -
+2024-03-01 13:02:01.252 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger/index.html - - - 200 - text/html;charset=utf-8 506.7113ms
+2024-03-01 13:02:04.128 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger/v1/swagger.json - -
+2024-03-01 13:02:05.041 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 912.9247ms
+2024-03-01 13:02:32.689 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32770/api/users/Create-user application/json 62
+2024-03-01 13:02:32.727 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.UserController.CreateUser (AuctionHub)'
+2024-03-01 13:02:32.866 +00:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(AuctionHub.Application.DTOs.AppUser.AppUserRequestDto) on controller AuctionHub.Controllers.UserController (AuctionHub).
+2024-03-01 13:02:38.162 +00:00 [INF] Executed DbCommand (107ms) [Parameters=[@__email_0='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UpdatedAt", "a"."UserName", "a"."VerifiedAt"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."Email" = @__email_0
+LIMIT 2
+2024-03-01 13:02:38.835 +00:00 [INF] Executed DbCommand (43ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (DbType = Int32), @p2='?' (Size = 36), @p3='?' (DbType = DateTime), @p4='?' (Size = 18), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?', @p9='?', @p10='?', @p11='?', @p12='?' (DbType = Boolean), @p13='?' (Size = 36), @p14='?' (DbType = Boolean), @p15='?' (DbType = DateTime), @p16='?', @p17='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UpdatedAt", "UserName", "VerifiedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+2024-03-01 13:02:38.894 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.AppUser.AppUserResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-01 13:02:38.946 +00:00 [INF] Executed action AuctionHub.Controllers.UserController.CreateUser (AuctionHub) in 6064.8726ms
+2024-03-01 13:02:38.953 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.UserController.CreateUser (AuctionHub)'
+2024-03-01 13:02:38.993 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32770/api/users/Create-user application/json 62 - 200 - application/json;+charset=utf-8 6304.5226ms
+2024-03-01 13:03:13.021 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/api/users/get-user/8b8046da-61eb-40e6-b619-32847676f1bb - -
+2024-03-01 13:03:13.043 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.UserController.GetUserById (AuctionHub)'
+2024-03-01 13:03:13.077 +00:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(System.String) on controller AuctionHub.Controllers.UserController (AuctionHub).
+2024-03-01 13:03:13.160 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UpdatedAt", "a"."UserName", "a"."VerifiedAt"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."Id" = @__userId_0
+LIMIT 2
+2024-03-01 13:03:13.195 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[AuctionHub.Application.DTOs.AppUser.AppUserResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-01 13:03:13.197 +00:00 [INF] Executed action AuctionHub.Controllers.UserController.GetUserById (AuctionHub) in 118.6089ms
+2024-03-01 13:03:13.199 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.UserController.GetUserById (AuctionHub)'
+2024-03-01 13:03:13.202 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/api/users/get-user/8b8046da-61eb-40e6-b619-32847676f1bb - - - 200 - application/json;+charset=utf-8 180.8915ms
+2024-03-01 13:03:49.363 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/api/bidding/get-all-bids - -
+2024-03-01 13:03:49.366 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingController.GetAllBidsAsync (AuctionHub)'
+2024-03-01 13:03:49.380 +00:00 [INF] Route matched with {action = "GetAllBids", controller = "Bidding"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBidsAsync() on controller AuctionHub.Controllers.BiddingController (AuctionHub).
+2024-03-01 13:03:49.503 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."Amount", "b"."BidTime", "b"."BiddingRoomId", "b"."CreatedAt", "b"."CreatedBy", "b"."UpdatedAt", "b"."UpdatedBy"
+FROM "Bids" AS "b"
+2024-03-01 13:03:49.585 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[AuctionHub.Application.DTOs.Bids.BidResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-01 13:03:49.594 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingController.GetAllBidsAsync (AuctionHub) in 212.7013ms
+2024-03-01 13:03:49.595 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingController.GetAllBidsAsync (AuctionHub)'
+2024-03-01 13:03:49.598 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/api/bidding/get-all-bids - - - 200 - application/json;+charset=utf-8 235.4554ms
+2024-03-01 13:04:07.933 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32770/api/bidding-room/start-auction application/json 184
+2024-03-01 13:04:07.936 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-01 13:04:07.962 +00:00 [INF] Route matched with {action = "StartAuction", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartAuctionAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-01 13:04:07.996 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-01 13:04:08.002 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub) in 38.6375ms
+2024-03-01 13:04:08.002 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-01 13:04:08.039 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32770/api/bidding-room/start-auction application/json 184 - 400 - application/json;+charset=utf-8 107.0317ms
+2024-03-01 13:04:22.520 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32770/api/bidding-room/start-auction application/json 186
+2024-03-01 13:04:22.526 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-01 13:04:22.528 +00:00 [INF] Route matched with {action = "StartAuction", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartAuctionAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-01 13:04:22.531 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-01 13:04:22.532 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub) in 3.4934ms
+2024-03-01 13:04:22.533 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-01 13:04:22.535 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32770/api/bidding-room/start-auction application/json 186 - 400 - application/json;+charset=utf-8 14.5852ms
+2024-03-01 13:04:32.682 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32770/api/bidding-room/start-auction application/json 188
+2024-03-01 13:04:32.767 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-01 13:04:32.771 +00:00 [INF] Route matched with {action = "StartAuction", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartAuctionAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-01 13:04:32.778 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-01 13:04:32.779 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub) in 6.3813ms
+2024-03-01 13:04:32.780 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-01 13:04:32.782 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32770/api/bidding-room/start-auction application/json 188 - 400 - application/json;+charset=utf-8 99.2616ms
+2024-03-01 13:04:44.182 +00:00 [INF] Request starting HTTP/2 POST https://localhost:32770/api/bidding-room/start-auction application/json 189
+2024-03-01 13:04:44.225 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-01 13:04:44.227 +00:00 [INF] Route matched with {action = "StartAuction", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartAuctionAsync(AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomRequestDto) on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-01 13:04:44.354 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Boolean), @p5='?' (Size = 8), @p6='?' (Size = 8), @p7='?' (DbType = DateTime), @p8='?', @p9='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "BiddingRooms" ("Id", "CreatedAt", "CreatedBy", "EndTime", "IsAuctionActive", "ItemName", "RoomName", "UpdatedAt", "UpdatedBy", "WinningBidId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-03-01 13:04:44.365 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-01 13:04:44.366 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub) in 132.1155ms
+2024-03-01 13:04:44.366 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.StartAuctionAsync (AuctionHub)'
+2024-03-01 13:04:44.367 +00:00 [INF] Request finished HTTP/2 POST https://localhost:32770/api/bidding-room/start-auction application/json 189 - 200 - application/json;+charset=utf-8 191.4458ms
+2024-03-01 13:05:06.981 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/api/bidding-room/get-all-bidding-rooms - -
+2024-03-01 13:05:06.982 +00:00 [INF] Executing endpoint 'AuctionHub.Controllers.BiddingRoomController.GetAllBiddingRoomsAsync (AuctionHub)'
+2024-03-01 13:05:06.998 +00:00 [INF] Route matched with {action = "GetAllBiddingRooms", controller = "BiddingRoom"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBiddingRoomsAsync() on controller AuctionHub.Controllers.BiddingRoomController (AuctionHub).
+2024-03-01 13:05:07.034 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "b"."Id", "b"."CreatedAt", "b"."CreatedBy", "b"."EndTime", "b"."IsAuctionActive", "b"."ItemName", "b"."RoomName", "b"."UpdatedAt", "b"."UpdatedBy", "b"."WinningBidId"
+FROM "BiddingRooms" AS "b"
+2024-03-01 13:05:07.046 +00:00 [INF] Executing OkObjectResult, writing value of type 'AuctionHub.Domain.ApiResponse`1[[System.Collections.Generic.List`1[[AuctionHub.Application.DTOs.BiddingRoom.BiddingRoomResponseDto, AuctionHub.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-01 13:05:07.077 +00:00 [INF] Executed action AuctionHub.Controllers.BiddingRoomController.GetAllBiddingRoomsAsync (AuctionHub) in 78.0724ms
+2024-03-01 13:05:07.081 +00:00 [INF] Executed endpoint 'AuctionHub.Controllers.BiddingRoomController.GetAllBiddingRoomsAsync (AuctionHub)'
+2024-03-01 13:05:07.086 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/api/bidding-room/get-all-bidding-rooms - - - 200 - application/json;+charset=utf-8 104.9859ms

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "go3y9YjgCDM3DsOODLXQ3diW6B8lW2y7PiHln8g7NU4phr2iFzjGCgzM+E/4ZLciSG9Io2Y6/A8QwJfdJk8cag==",
+  "dgSpecHash": "xborz0+otOzD4PfSaUvzTRirtD0YKq8c4W8ysTYhFzjfCu5RlkQG0H66Sl1s/p0PPOD6rwY4p+ThLMaXfXBCew==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\My-project\\AuctionHub\\AuctionHub.Api\\AuctionHub.Domain\\AuctionHub.Domain.csproj",
   "expectedPackageFiles": [
@@ -21,7 +21,10 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\rabbitmq.client\\6.8.1\\rabbitmq.client.6.8.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

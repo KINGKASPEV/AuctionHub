@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PqdmL2PdLhatgPelpSI8AiRypqzDjmdhifWQgtAe6ujA70oh8uJ1zzsmeXTtJKxlyP9lcJB+91+K9d3xOeykbQ==",
+  "dgSpecHash": "LF/liBtFdimfG4QfyrmSg7CahzYD5+JS1qfFnJb7pPrpEbCF/VYydhXElsOS2SGXctLVP4QesyGg9u8n+TBJ9w==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\My-project\\AuctionHub\\AuctionHub.Api\\AuctionHub\\AuctionHub.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\easynetq\\7.8.0\\easynetq.7.8.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.15\\microsoft.aspnetcore.cryptography.internal.7.0.15.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.15\\microsoft.aspnetcore.cryptography.keyderivation.7.0.15.nupkg.sha512",

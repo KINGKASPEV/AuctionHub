@@ -1,10 +1,12 @@
 using AuctionHub.Configurations;
+using AuctionHub.Domain.Entities;
 using AuctionHub.ServiceExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var config = builder.Configuration;
+//var rabbitMQConfig = config.GetSection("RabbitMQConfig").Get<RabbitMQConfig>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

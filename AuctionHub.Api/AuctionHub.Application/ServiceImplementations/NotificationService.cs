@@ -48,13 +48,13 @@ namespace AuctionHub.Application.ServiceImplementations
             }
         }
 
-        public async Task<ApiResponse<NotificationResponseDto>> NotifyAuctionConclusionAsync(BiddingRoomRequestDto biddingRoomRequestDto)
+        public async Task<ApiResponse<NotificationResponseDto>> NotifyAuctionConclusionAsync(BiddingRoomRequest biddingRoomRequest)
         {
             try
             {
                 var notification = new Notification
                 {
-                    Message = $"Auction for item '{biddingRoomRequestDto.ItemName}' has concluded. Winner: {biddingRoomRequestDto.WinningBid.Amount}.",
+                    Message = $"Auction for item '{biddingRoomRequest.ItemName}' has concluded. Winner: {biddingRoomRequest.WinningBid.Amount}.",
                     NotificationTime = DateTime.UtcNow
                 };
 

@@ -3,6 +3,6 @@
     public class NotificationRequestDto
     {
         public string Message { get; set; }
-        public DateTime NotificationTime { get; set; } = DateTime.UtcNow;
+       // public DateTime NotificationTime { get; set; } = DateTime.UtcNow;
     }
 }

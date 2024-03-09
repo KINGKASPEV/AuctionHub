@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "EasyNetQ/7.8.0": {
+        "type": "package",
+        "dependencies": {
+          "RabbitMQ.Client": "6.8.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/EasyNetQ.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/EasyNetQ.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1185,7 +1201,9 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "AuctionHub.Domain": "1.0.0",
-          "Paystack.Net": "1.1.0"
+          "EasyNetQ": "7.8.0",
+          "Paystack.Net": "1.1.0",
+          "RabbitMQ.Client": "6.8.1"
         },
         "compile": {
           "bin/placeholder/AuctionHub.Application.dll": {}
@@ -1198,7 +1216,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.15"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.15",
+          "RabbitMQ.Client": "6.8.1"
         },
         "compile": {
           "bin/placeholder/AuctionHub.Domain.dll": {}
@@ -1225,6 +1244,22 @@
     }
   },
   "libraries": {
+    "EasyNetQ/7.8.0": {
+      "sha512": "Qo+OoVkQMsN/LU/0QtKZF+bt8W0G5gd3OUibxluWQhWA2bqmapS9R+Hvb3hpQ5JV+TaiJyxM43ZkmnhOLm9r0g==",
+      "type": "package",
+      "path": "easynetq/7.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EasyNetQ.png",
+        "easynetq.7.8.0.nupkg.sha512",
+        "easynetq.nuspec",
+        "lib/netstandard2.0/EasyNetQ.dll",
+        "lib/netstandard2.0/EasyNetQ.pdb",
+        "lib/netstandard2.0/EasyNetQ.xml",
+        "licence.txt"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -3055,6 +3090,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "AuctionHub.Infrastructure >= 1.0.0",
+      "EasyNetQ >= 7.8.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.15",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.15",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.19.4",
@@ -3109,6 +3145,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "EasyNetQ": {
+            "target": "Package",
+            "version": "[7.8.0, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[7.0.15, )"

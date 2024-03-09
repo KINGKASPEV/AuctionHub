@@ -31,6 +31,7 @@ namespace AuctionHub.ServiceExtensions
             services.AddDbContext<AuctionHubDbContext>(options =>
             options.UseSqlite(config.GetConnectionString("DefaultConnection")));
             services.Configure<PaystackSettings>(config.GetSection("PaystackSettings"));
+            services.AddSingleton<RabbitMQConfig>(config.GetSection("RabbitMQConfig").Get<RabbitMQConfig>());
         }
     }
 }
